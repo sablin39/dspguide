@@ -1,0 +1,303 @@
+	 
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Periodic Nature of the DFT</title>
+<link href="../new/css/default.css" rel="stylesheet" type="text/css" />
+
+<script type='text/javascript' src='../new/js/jquery-1.5.js'></script>
+<script type='text/javascript' src='../new/js/jquery.droppy.js'></script>
+<link rel="stylesheet" href="../new/css/droppy.css" type="text/css" />
+<script type='text/javascript' src='../new/js/jcc.js'></script>
+<script>
+$(function(){
+	if($.browser.msie){
+        if($.browser.version.substr(0,1)!="9"){
+            $('#greenBox2').corner({tl:{radius:5}, tr:{radius:5}, bl:{radius:5}, br:{radius:5}, antiAlias:true });
+        }
+    }else{
+        $('#greenBox2').corner({tl:{radius:5}, tr:{radius:5}, bl:{radius:3}, br:{radius:5}, antiAlias:true });
+    }
+});
+</script>
+
+<link rel="stylesheet" href="../new/css/jquery.treeview.css" />
+<script src="../new/js/jquery.cookie.js" type="text/javascript"></script>
+<script src="../new/js/jquery.treeview.js" type="text/javascript"></script>
+<script type="text/javascript" src="../new/js/demo.js"></script>
+
+</head>
+
+<body>
+
+
+<div id="divPage">
+	<div id="wrapper" class="not-logged-in">
+		
+		<!-- Header -->
+		
+<div id="header">
+			<h1>The Scientist and Engineer's Guide to<br />Digital Signal Processing<br /><span class="txtBlue txt26">By Steven W. Smith, Ph.D.</span></h1>
+			<div id="menu">
+				<ul id='nav' style="margin-left:10px;"><li><a href="../index.html">Home</a></li><li><a href="../pdfbook.htm" class="selected">The Book by Chapters</a></li><li class="drop"><a href="../about.htm">About the Book</a>					
+					<ul>						
+						<li><a href="../copyrite.htm">Copyright and permissible use</a></li>							
+						<li><a href="../whatdsp.htm">What is DSP?</a></li>
+						<li><a href="../eightres.htm">8 good reasons for learning DSP</a></li>
+						<li><a href="../reviews.htm">Comments by reviewers</a></li>
+						<li><a href="../errata.htm">Errata</a></li>			
+						<li><a href="http://www.dspguide.com/ch10/download.htm">Free Software and Teaching Aids</a></li>						
+						<li><a href="../editions.htm">Differences Between Editions</a></li>
+					</ul>
+				  </li><li><a href="../swsmith.htm">Steven W. Smith</a></li><li><a href="http://www.dsprelated.com/blogs-1/nf/Steve_Smith.php">Blog</a></li><li><a href="../contact.htm">Contact</a></li>					
+				</ul>
+				<script type="text/javascript">$(function() {$("#nav").droppy();});</script>
+			</div>
+		</div>
+
+		
+		<!-- Content -->
+		
+		<!-- -->		
+		<div id="columnLeft">			
+			
+			<div class="box">
+				<h2>Book Search</h2>
+				<div id="search">
+					<form action="http://www.dspguide.com/search.php" method="post">
+						<input type="text" name="searchfor" class="txtField" />
+						<input type="image" src="../new/images/btn-go.png" name="Submit" value="Submit" class="button" />
+						<div class="clear"><!-- --></div>
+					</form>
+				</div>
+			</div>
+		
+			
+			<div class="box">
+				<h2>Download this chapter in PDF format</h2>
+				<b><a href="../CH10.PDF">Chapter10.pdf</a></b>
+				<br />
+				<img src="../new/images/adobe-reader.png" alt="" vspace="5" />
+			</div>
+
+			<div class="box">
+				<h2>Table of contents</h2>
+				<ul id="red" class="treeview-red">	 
+					<ul style="border-top:1px solid #aeaeeb;"><li style="border-top:1px solid #aeaeeb;"><a href="../ch1.htm">1: The Breadth and Depth of DSP</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch1/1.htm">The Roots of DSP</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch1/2.htm">Telecommunications</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch1/3.htm" style="color:#b4b4e9;">Audio Processing</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch1/4.htm">Echo Location</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch1/5.htm">Image Processing</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch2.htm">2: Statistics, Probability and Noise</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch2/1.htm">Signal and Graph Terminology</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch2/2.htm">Mean and Standard Deviation</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch2/3.htm" style="color:#b4b4e9;">Signal vs. Underlying Process</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch2/4.htm">The Histogram, Pmf and Pdf</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch2/5.htm">The Normal Distribution</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch2/6.htm">Digital Noise Generation</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch2/7.htm">Precision and Accuracy</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch3.htm">3: ADC and DAC</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch3/1.htm">Quantization</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch3/2.htm">The Sampling Theorem</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch3/3.htm" style="color:#b4b4e9;">Digital-to-Analog Conversion</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch3/4.htm">Analog Filters for Data Conversion</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch3/5.htm">Selecting The Antialias Filter</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch3/6.htm">Multirate Data Conversion</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch3/7.htm">Single Bit Data Conversion</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch4.htm">4: DSP Software</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch4/1.htm">Computer Numbers</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch4/2.htm">Fixed Point (Integers)</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch4/3.htm" style="color:#b4b4e9;">Floating Point (Real Numbers)</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch4/4.htm">Number Precision</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch4/5.htm">Execution Speed: Program Language</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch4/6.htm">Execution Speed: Hardware</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch4/7.htm">Execution Speed: Programming Tips</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch5.htm">5: Linear Systems</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch5/1.htm">Signals and Systems</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch5/2.htm">Requirements for Linearity</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch5/3.htm" style="color:#b4b4e9;">Static Linearity and Sinusoidal Fidelity</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch5/4.htm">Examples of Linear and Nonlinear Systems</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch5/5.htm">Special Properties of Linearity</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch5/6.htm">Superposition: the Foundation of DSP</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch5/7.htm">Common Decompositions</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch5/8.htm">Alternatives to Linearity</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch6.htm">6: Convolution</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch6/1.htm">The Delta Function and Impulse Response</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch6/2.htm">Convolution</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch6/3.htm" style="color:#b4b4e9;">The Input Side Algorithm</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch6/4.htm">The Output Side Algorithm</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch6/5.htm">The Sum of Weighted Inputs</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch7.htm">7: Properties of Convolution</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch7/1.htm">Common Impulse Responses</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch7/2.htm">Mathematical Properties</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch7/3.htm" style="color:#b4b4e9;">Correlation</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch7/4.htm">Speed</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch8.htm">8: The Discrete Fourier Transform</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch8/1.htm">The Family of Fourier Transform</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch8/2.htm">Notation and Format of the Real DFT</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch8/3.htm" style="color:#b4b4e9;">The Frequency Domain's Independent Variable</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch8/4.htm">DFT Basis Functions</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch8/5.htm">Synthesis, Calculating the Inverse DFT</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch8/6.htm">Analysis, Calculating the DFT</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch8/7.htm">Duality</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch8/8.htm">Polar Notation</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch8/9.htm">Polar Nuisances</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch9.htm">9: Applications of the DFT</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch9/1.htm">Spectral Analysis of Signals</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch9/2.htm">Frequency Response of Systems</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch9/3.htm" style="color:#b4b4e9;">Convolution via the Frequency Domain</a></li></ul></li><li class="open" style="border-top:1px solid #aeaeeb;"><a href="../ch10.htm" style="color:#b4b4e9;">10: Fourier Transform Properties</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="1.htm">Linearity of the Fourier Transform</a></li><li style="border-top:1px solid #aeaeeb;"><a href="2.htm">Characteristics of the Phase</a></li><li style="border-top:1px solid #aeaeeb;"><a href="3.htm" style="color:#b4b4e9;">Periodic Nature of the DFT</a></li><li style="border-top:1px solid #aeaeeb;"><a href="4.htm">Compression and Expansion, Multirate methods</a></li><li style="border-top:1px solid #aeaeeb;"><a href="5.htm">Multiplying Signals (Amplitude Modulation)</a></li><li style="border-top:1px solid #aeaeeb;"><a href="6.htm">The Discrete Time Fourier Transform</a></li><li style="border-top:1px solid #aeaeeb;"><a href="7.htm">Parseval's Relation</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch11.htm">11: Fourier Transform Pairs</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch11/1.htm">Delta Function Pairs</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch11/2.htm">The Sinc Function</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch11/3.htm" style="color:#b4b4e9;">Other Transform Pairs</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch11/4.htm">Gibbs Effect</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch11/5.htm">Harmonics</a></li><li style="border-top:1px solid #aeaeeb;"><a href="http://www.dspguide.com/ch11/6.htm">Chirp Signals</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch12.htm">12: The Fast Fourier Transform</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch12/1.htm">Real DFT Using the Complex DFT</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch12/2.htm">How the FFT works</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch12/3.htm" style="color:#b4b4e9;">FFT Programs</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch12/4.htm">Speed and Precision Comparisons</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch12/5.htm">Further Speed Increases</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch13.htm">13: Continuous Signal Processing</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch13/1.htm">The Delta Function</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch13/2.htm">Convolution</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch13/3.htm" style="color:#b4b4e9;">The Fourier Transform</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch13/4.htm">The Fourier Series</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch14.htm">14: Introduction to Digital Filters</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch14/1.htm">Filter Basics</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch14/2.htm">How Information is Represented in Signals</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch14/3.htm" style="color:#b4b4e9;">Time Domain Parameters</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch14/4.htm">Frequency Domain Parameters</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch14/5.htm">High-Pass, Band-Pass and Band-Reject Filters</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch14/6.htm">Filter Classification</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch15.htm">15: Moving Average Filters</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch15/1.htm">Implementation by Convolution</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch15/2.htm">Noise Reduction vs. Step Response</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch15/3.htm" style="color:#b4b4e9;">Frequency Response</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch15/4.htm">Relatives of the Moving Average Filter</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch15/5.htm">Recursive Implementation</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch16.htm">16: Windowed-Sinc Filters</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch16/1.htm">Strategy of the Windowed-Sinc</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch16/2.htm">Designing the Filter</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch16/3.htm" style="color:#b4b4e9;">Examples of Windowed-Sinc Filters</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch16/4.htm">Pushing it to the Limit</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch17.htm">17: Custom Filters</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch17/1.htm">Arbitrary Frequency Response</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch17/2.htm">Deconvolution</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch17/3.htm" style="color:#b4b4e9;">Optimal Filters</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch18.htm">18: FFT Convolution</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch18/1.htm">The Overlap-Add Method</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch18/2.htm">FFT Convolution</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch18/3.htm" style="color:#b4b4e9;">Speed Improvements</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch19.htm">19: Recursive Filters</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch19/1.htm">The Recursive Method</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch19/2.htm">Single Pole Recursive Filters</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch19/3.htm" style="color:#b4b4e9;">Narrow-band Filters</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch19/4.htm">Phase Response</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch19/5.htm">Using Integers</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch20.htm">20: Chebyshev Filters</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch20/1.htm">The Chebyshev and Butterworth Responses</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch20/2.htm">Designing the Filter</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch20/3.htm" style="color:#b4b4e9;">Step Response Overshoot</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch20/4.htm">Stability</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch21.htm">21: Filter Comparison</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch21/1.htm">Match #1: Analog vs. Digital Filters</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch21/2.htm">Match #2: Windowed-Sinc vs. Chebyshev</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch21/3.htm" style="color:#b4b4e9;">Match #3: Moving Average vs. Single Pole</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch22.htm">22: Audio Processing</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch22/1.htm">Human Hearing</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch22/2.htm">Timbre</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch22/3.htm" style="color:#b4b4e9;">Sound Quality vs. Data Rate</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch22/4.htm">High Fidelity Audio</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch22/5.htm">Companding</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch22/6.htm">Speech Synthesis and Recognition</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch22/7.htm">Nonlinear Audio Processing</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch23.htm">23: Image Formation & Display</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch23/1.htm">Digital Image Structure</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch23/2.htm">Cameras and Eyes</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch23/3.htm" style="color:#b4b4e9;">Television Video Signals</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch23/4.htm">Other Image Acquisition and Display</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch23/5.htm">Brightness and Contrast Adjustments</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch23/6.htm">Grayscale Transforms</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch23/7.htm">Warping</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch24.htm">24: Linear Image Processing</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch24/1.htm">Convolution</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch24/2.htm">3x3 Edge Modification</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch24/3.htm" style="color:#b4b4e9;">Convolution by Separability</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch24/4.htm">Example of a Large PSF: Illumination Flattening</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch24/5.htm">Fourier Image Analysis</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch24/6.htm">FFT Convolution</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch24/7.htm">A Closer Look at Image Convolution</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch25.htm">25: Special Imaging Techniques</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch25/1.htm">Spatial Resolution</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch25/2.htm">Sample Spacing and Sampling Aperture</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch25/3.htm" style="color:#b4b4e9;">Signal-to-Noise Ratio</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch25/4.htm">Morphological Image Processing</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch25/5.htm">Computed Tomography</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch26.htm">26: Neural Networks (and more!)</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch26/1.htm">Target Detection</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch26/2.htm">Neural Network Architecture</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch26/3.htm" style="color:#b4b4e9;">Why Does it Work?</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch26/4.htm">Training the Neural Network</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch26/5.htm">Evaluating the Results</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch26/6.htm">Recursive Filter Design</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch27.htm">27: Data Compression</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch27/1.htm">Data Compression Strategies</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch27/2.htm">Run-Length Encoding</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch27/3.htm" style="color:#b4b4e9;">Huffman Encoding</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch27/4.htm">Delta Encoding</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch27/5.htm">LZW Compression</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch27/6.htm">JPEG (Transform Compression)</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch27/7.htm">MPEG</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch28.htm">28: Digital Signal Processors</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch28/1.htm">How DSPs are Different from Other Microprocessors</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch28/2.htm">Circular Buffering</a></li><li style="border-top:1px solid #aeaeeb;"><a href="http://www.dspguide.com/ch28/3.htm" style="color:#b4b4e9;">Architecture of the Digital Signal Processor</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch28/4.htm">Fixed versus Floating Point</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch28/5.htm">C versus Assembly</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch28/6.htm">How Fast are DSPs?</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch28/7.htm">The Digital Signal Processor Market</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch29.htm">29: Getting Started with DSPs</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="http://www.dspguide.com/ch29/1.htm">The ADSP-2106x family</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch29/2.htm">The SHARC EZ-KIT Lite</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch29/3.htm" style="color:#b4b4e9;">Design Example: An FIR Audio Filter</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch29/4.htm">Analog Measurements on a DSP System</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch29/5.htm">Another Look at Fixed versus Floating Point</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch29/6.htm">Advanced Software Tools</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch30.htm">30: Complex Numbers</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch30/1.htm">The Complex Number System</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch30/2.htm">Polar Notation</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch30/3.htm" style="color:#b4b4e9;">Using Complex Numbers by Substitution</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch30/4.htm">Complex Representation of Sinusoids</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch30/5.htm">Complex Representation of Systems</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch30/6.htm">Electrical Circuit Analysis</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch31.htm">31: The Complex Fourier Transform</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch31/1.htm">The Real DFT</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch31/2.htm">Mathematical Equivalence</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch31/3.htm" style="color:#b4b4e9;">The Complex DFT</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch31/4.htm">The Family of Fourier Transforms</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch31/5.htm">Why the Complex Fourier Transform is Used</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch32.htm">32: The Laplace Transform</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch32/1.htm">The Nature of the s-Domain</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch32/2.htm">Strategy of the Laplace Transform</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch32/3.htm" style="color:#b4b4e9;">Analysis of Electric Circuits</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch32/4.htm">The Importance of Poles and Zeros</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch32/5.htm">Filter Design in the s-Domain</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch33.htm">33: The z-Transform</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch33/1.htm">The Nature of the z-Domain</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch33/2.htm">Analysis of Recursive Systems</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch33/3.htm" style="color:#b4b4e9;">Cascade and Parallel Stages</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch33/4.htm">Spectral Inversion</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch33/5.htm">Gain Changes</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch33/6.htm">Chebyshev-Butterworth Filter Design</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch33/7.htm">The Best and Worst of DSP</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch34.htm">34: Explaining Benford's Law</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch34/1.htm">Frank Benford's Discovery</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch34/2.htm">Homomorphic Processing</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch34/3.htm" style="color:#b4b4e9;">The Ones Scaling Test</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch34/4.htm">Writing Benford's Law as a Convolution</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch34/5.htm">Solving in the Frequency Domain</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch34/6.htm">Solving Mystery #1</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch34/7.htm">Solving Mystery #2</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch34/8.htm">More on Following Benford's law</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch34/9.htm">Analysis of the Log-Normal Distribution</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch34/10.htm">The Power of Signal Processing</a></li></ul></li>
+					</ul>
+				</ul>			
+			</div>
+
+			<div class="box">
+				<h2>How to order your own hardcover copy</h2>
+				Wouldn't you rather have a bound book instead of 640 loose pages?<br />
+				Your laser printer will thank you!<br />
+				<b>Order from <a href="http://www.amazon.com/Scientist-Engineers-Digital-Signal-Processing/dp/0966017633/ref=pd_bxgy_b_img_a">Amazon.com</a>.</b>
+			</div>
+
+		
+			
+		</div>	
+
+		<!-- -->		
+		<div id="columnRight">	
+		
+			<div id="adbox">
+				
+			
+			</div>	 
+			
+<div class="breadcrumbs"><a href="../ch10.htm">Chapter 10 - Fourier Transform Properties</a> / Periodic Nature of the DFT</div><h2>Chapter 10: Fourier Transform Properties</h2><div class="subTitle">Periodic Nature of the DFT</div><p><div style="text-align: justify"><p>Unlike the other three Fourier Transforms, the DFT views <i>both</i> the time domain
+and the frequency domain as <i>periodic</i>.  This can be confusing and inconvenient
+since most of the signals used in DSP are <i>not</i> periodic.  Nevertheless, if you
+want to use the DFT, you must conform with the DFT's view of the world. </p>
+
+<p>Figure 10-8 shows two different interpretations of the time domain signal. First,
+look at the upper signal, the time domain viewed as <i>N</i> points. This represents
+how digital signals are typically acquired in scientific experiments and
+engineering applications.  For instance, these 128 samples might have been
+acquired by sampling some parameter at regular intervals of <i>time</i>.  Sample 0 is
+distinct and separate from sample 127 because they were acquired at <i>different</i>
+times.  From the way this signal was formed, there is no reason to think that the
+samples on the left of the signal are even related to the samples on the right.  </p>
+<p>&#160;&#160;</p>
+<p>Unfortunately, the DFT doesn't see things this way.  As shown in the lower
+figure, the DFT views these 128 points to be a single period of an infinitely long
+periodic signal.  This means that the left side of the acquired signal is connected
+to the right side of a duplicate signal.  Likewise, the right side of the acquired
+signal is connected to the left side of an identical period.  This can also be
+thought of as the right side of the acquired signal wrapping around and
+connecting to its left side.  In this view, sample 127 occurs next to sample 0, just
+as sample 43 occurs next to sample 44.  This is referred to as being <span style="font-weight: bold">circular</span>,
+and is identical to viewing the signal as being <i>periodic</i>.</p>
+
+<p>The most serious consequence of this periodicity is <span style="font-weight: bold">time domain aliasing.</span>  To
+illustrate this, suppose we take a time domain signal and pass it through the
+DFT to find its frequency spectrum.  We could immediately pass this frequency
+spectrum through an Inverse DFT to reconstruct the original time domain
+signal, but the entire procedure wouldn't be very interesting.  Instead, we will
+modify the frequency spectrum in some manner before using the Inverse DFT. 
+For instance, selected frequencies might be deleted, changed in amplitude or
+phase, shifted around, etc.  These are the kinds of things routinely done in DSP. 
+Unfortunately, these changes in the frequency domain can create a time domain
+signal that is too long to fit into</p>
+
+<div style="text-align: center; margin: 20px;"><img src="../graphics/F_10_8.gif" border="0" alt=""></img></div>
+
+<p>a single period.  This forces the signal to spill over from one period into the
+adjacent periods.  When the time domain is viewed as <i>circular</i>, portions of the
+signal that overflow on the right suddenly seem to reappear on the left side of
+the signal, and vice versa.  That is, the overflowing portions of the signal <i>alias</i>
+themselves to a new location in the time domain.  If this new location happens
+to already contain an existing signal, the whole mess adds, resulting in a loss of
+information.  Circular convolution resulting from frequency domain
+multiplication (discussed in Chapter 9), is an excellent example of this type of
+aliasing.</p>
+
+<p>Periodicity in the frequency domain behaves in much the same way, but is  more
+complicated.  Figure 10-9 shows an example.   The upper figures show the
+magnitude and phase of the frequency spectrum, viewed as being composed of
+<i>N</i>/2 + 1 samples spread between 0 and 0.5 of the sampling rate.  This is the
+simplest way of viewing the frequency spectrum, but it doesn't  explain many
+of the DFT's properties. </p>
+
+<p>The lower two figures show how the DFT views this frequency spectrum as
+being periodic.  The key feature is that the frequency spectrum between 0 and
+0.5 appears to have a <i>mirror image</i> of frequencies that run between 0 and -0.5. 
+This mirror image of <span style="font-weight: bold">negative frequencies</span> is slightly different for the
+magnitude and the phase signals.  In the magnitude, the signal is flipped left-for-right.  In the phase, the signal is flipped left-for-right, <i>and</i> changed in sign. 
+As you recall, these two types of symmetry are given names:  the magnitude is
+said to be an <span style="font-weight: bold">even</span> signal (it has <i>even</i> symmetry),  while the phase is said to be
+an <span style="font-weight: bold">odd</span> signal (it has <i>odd</i> symmetry).  If the frequency spectrum is converted
+into the real and imaginary parts, the <i>real part</i> will always be <i>even</i>, while the
+<i>imaginary part</i> will always be <i>odd</i>.  </p>
+
+<p>Taking these negative frequencies into account, the DFT views the frequency
+domain as periodic, with a period of 1.0 times the sampling rate, such as -0.5 to
+0.5, or 0 to 1.0.  In terms of sample numbers, this makes the length of the
+frequency domain period equal to <i>N</i>, the same as in the time domain.</p>
+
+<p>The periodicity of the frequency domain makes it susceptible to <span style="font-weight: bold">frequency
+domain aliasing</span>, completely analogous to the previously described time domain
+aliasing.  Imagine a time domain signal that corresponds to some frequency
+spectrum.  If the time domain signal is modified, it is obvious that the frequency
+spectrum will also be changed.  If the modified frequency spectrum cannot fit
+in the space provided, it will push into the adjacent periods.  Just as before, this
+aliasing causes two problems: frequencies aren't where they should be, and
+overlapping frequencies from different periods add, destroying information.</p>
+
+<p>Frequency domain aliasing is more difficult to understand than time domain
+aliasing, since the periodic pattern is more complicated in the frequency
+domain.  Consider a single frequency that is being forced to move from 0.01 to
+0.49 in the frequency domain.  The corresponding negative frequency is
+therefore moving from -0.01 to -0.49.  When the positive frequency moves</p>	
+
+<div style="text-align: center; margin: 20px;"><img src="../graphics/F_10_9.gif" border="0" alt=""></img></div>
+
+<p>across the 0.5 barrier, the negative frequency is pushed across the -0.5 barrier. 
+Since the frequency domain is periodic, these same events are occurring in the
+other periods, such as between 0.5 and 1.5.  A clone of the positive frequency
+is crossing frequency 1.5 from left to right, while a clone of the negative
+frequency is crossing 0.5 from right to left. Now imagine what this looks like
+if you can only see the frequency band of 0 to 0.5.  It appears that a frequency
+leaving to the <i>right</i>, reappears on the <i>right</i>, but moving in the opposite direction.</p>
+
+<p>Figure 10-10 illustrates how aliasing appears in the time and frequency domains
+when only a single period is viewed.   As shown in (a), if one end of a time
+domain signal is too long to fit inside a single period, the protruding end will be
+<i>cut off</i> and <i>pasted</i> onto the other side.   In comparison, (b) shows that when a
+frequency domain signal overflows the period, the protruding end is <i>folded over</i>. 
+ Regardless of where the aliased segment ends up, it adds to whatever signal is
+already there, destroying information.  </p>
+
+<p>Let's take a closer look at these strange things called <i>negative frequencies</i>.
+Are they just some bizarre artifact of the mathematics, or do they have a real
+world meaning?   Figure 10-11 shows what they are about.  Figure (a) is a
+discrete signal composed of 32 samples.   Imagine that you are given the task
+of finding the frequency spectrum that corresponds to these 32 points.  To make your job easier, you are told that these points represent a discrete cosine wave. In other words, you must find the frequency and phase shift (<i>f</i> and &theta;) such that <i>x</i>[<i>n</i>] = cos(2&pi;<i>nf</i>/<i>N</i> + &theta;) matches the given samples. It isn't long before you come up with the solution shown in (b), that is, <i>f</i> = 3 and &theta; = -&pi;/4.</p>
+
+<p>If you stopped your analysis at this point, you only get 1/3 credit for the
+problem. This is because there are two other solutions that you have missed. 
+As shown in (c), the second solution is <i>f</i> = -3 and &theta; = &pi;/4.  Even if the idea of
+a <i>negative frequency</i> offends your sensibilities, it doesn't </p>
+
+<div style="text-align: center; margin: 20px;"><img src="../graphics/F_10_10.gif" border="0" alt=""></img></div>
+
+<div style="text-align: center; margin: 20px;"><img src="../graphics/F_10_11.gif" border="0" alt=""></img></div>
+
+<p>change the fact that it is a mathematically valid solution to the defined problem. 
+ Every <i>positive</i> frequency sinusoid can alternately be expressed as a <i>negative</i>
+frequency sinusoid.  This applies to continuous as well as discrete signals. </p>
+
+<p>The third solution is not a single answer, but an infinite family of solutions.  As
+shown in (d), the sinusoid with <i>f</i> = 35 and &theta; = -&pi;/4 passes through all of the
+discrete points, and is therefore a correct solution.  The fact that it shows
+oscillation between the samples may be confusing, but it doesn't disqualify it
+from being an authentic answer.  Likewise,  <i>f</i> = &plusmn;29, <i>f</i> = ?35, <i>f</i> = ?61, and <i>f</i> = ?67 are all solutions with multiple oscillations between the points.  This
+third group of solutions requires the original signal to be discrete, rather than
+continuous.   With continuous signals, you can't have oscillations between the
+samples, because you don't have samples. </p>
+
+<p>Each of these three solutions corresponds to a different section of the frequency
+spectrum. For discrete signals, the first solution corresponds to  frequencies
+between 0 and 0.5 of the sampling rate.  The second solution results in
+frequencies between 0 and -0.5.  Lastly, the third solution makes up the infinite
+number of duplicated frequencies below -0.5 and above 0.5.  With continuous
+signals, the first solution results in frequencies from zero to positive infinity,
+while the second solution results in frequencies from zero to negative infinity. 
+</p>
+
+<p>Many DSP techniques do not require the use of negative frequencies, or an
+understanding of the DFT's periodicity.   For example, two common ones were
+described in the last chapter, <i>spectral analysis</i>, and the <i>frequency response</i> of
+systems.  For these applications, it is completely sufficient to view the time
+domain as extending from sample 0 to <i>N</i>-1, and the frequency domain from zero
+to one-half of the sampling frequency.   These techniques can use a simpler
+view of the world because they never result in portions of one period moving
+into another period.  With this restriction, looking at a single period is no
+different from looking at the entire periodic signal.  </p>
+
+<p>However, certain procedures can <i>only</i> be analyzed by considering how  signals
+overflow between periods.  Two examples of this have already been presented,
+<i>circular convolution</i> and <i>analog-to-digital conversion</i>.   In circular convolution,
+multiplication of the frequency spectra results in the time domain signals being
+convolved.  If the resulting time domain signal is too long to fit inside a single
+period, it overflows into the adjacent periods, resulting in <i>time domain aliasing</i>. 
+In contrast, analog-to-digital conversion is an example of <i>frequency domain
+aliasing</i>.   A nonlinear action is taken in the time domain, that is, changing a
+continuous signal into a discrete signal by sampling.  The problem is, the
+spectrum of the original analog signal may be too long to fit inside the discrete
+signal's spectrum.  When we force the situation, the ends of the spectrum
+protrude into adjacent periods.  Let's look at two more examples where the
+periodic nature of the DFT is important, <i>compression &amp; expansion</i> of signals,
+and <i>amplitude modulation</i>.  </p></div></p>Next Section: <a href="4.htm">Compression and Expansion, Multirate methods</a>			
+
+		</div>
+		<div class="clear"><!-- --></div>
+		
+
+	</div>
+</div>
+
+<!-- Footer -->
+
+<div id="footer">
+	<a href="../index.html">Home</a> | <a href="../pdfbook.htm">The Book by Chapters</a> | <a href="../about.htm">About the Book</a> | <a href="../swsmith.htm">Steven W. Smith</a> | <a href="http://www.dsprelated.com/blogs-1/nf/Steve_Smith.php">Blog</a> | <a href="../contact.htm">Contact</a>
+	<br />
+	Copyright © 1997-2011 by California Technical Publishing
+</div>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-1774944-11");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+</body>
+</html>

@@ -1,0 +1,347 @@
+	 
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Single Bit Data Conversion</title>
+<link href="../new/css/default.css" rel="stylesheet" type="text/css" />
+
+<script type='text/javascript' src='../new/js/jquery-1.5.js'></script>
+<script type='text/javascript' src='../new/js/jquery.droppy.js'></script>
+<link rel="stylesheet" href="../new/css/droppy.css" type="text/css" />
+<script type='text/javascript' src='../new/js/jcc.js'></script>
+<script>
+$(function(){
+	if($.browser.msie){
+        if($.browser.version.substr(0,1)!="9"){
+            $('#greenBox2').corner({tl:{radius:5}, tr:{radius:5}, bl:{radius:5}, br:{radius:5}, antiAlias:true });
+        }
+    }else{
+        $('#greenBox2').corner({tl:{radius:5}, tr:{radius:5}, bl:{radius:3}, br:{radius:5}, antiAlias:true });
+    }
+});
+</script>
+
+<link rel="stylesheet" href="../new/css/jquery.treeview.css" />
+<script src="../new/js/jquery.cookie.js" type="text/javascript"></script>
+<script src="../new/js/jquery.treeview.js" type="text/javascript"></script>
+<script type="text/javascript" src="../new/js/demo.js"></script>
+
+</head>
+
+<body>
+
+
+<div id="divPage">
+	<div id="wrapper" class="not-logged-in">
+		
+		<!-- Header -->
+		
+<div id="header">
+			<h1>The Scientist and Engineer's Guide to<br />Digital Signal Processing<br /><span class="txtBlue txt26">By Steven W. Smith, Ph.D.</span></h1>
+			<div id="menu">
+				<ul id='nav' style="margin-left:10px;"><li><a href="../index.html">Home</a></li><li><a href="../pdfbook.htm" class="selected">The Book by Chapters</a></li><li class="drop"><a href="../about.htm">About the Book</a>					
+					<ul>						
+						<li><a href="../copyrite.htm">Copyright and permissible use</a></li>							
+						<li><a href="../whatdsp.htm">What is DSP?</a></li>
+						<li><a href="../eightres.htm">8 good reasons for learning DSP</a></li>
+						<li><a href="../reviews.htm">Comments by reviewers</a></li>
+						<li><a href="../errata.htm">Errata</a></li>			
+						<li><a href="http://www.dspguide.com/ch3/download.htm">Free Software and Teaching Aids</a></li>						
+						<li><a href="../editions.htm">Differences Between Editions</a></li>
+					</ul>
+				  </li><li><a href="../swsmith.htm">Steven W. Smith</a></li><li><a href="http://www.dsprelated.com/blogs-1/nf/Steve_Smith.php">Blog</a></li><li><a href="../contact.htm">Contact</a></li>					
+				</ul>
+				<script type="text/javascript">$(function() {$("#nav").droppy();});</script>
+			</div>
+		</div>
+
+		
+		<!-- Content -->
+		
+		<!-- -->		
+		<div id="columnLeft">			
+			
+			<div class="box">
+				<h2>Book Search</h2>
+				<div id="search">
+					<form action="http://www.dspguide.com/search.php" method="post">
+						<input type="text" name="searchfor" class="txtField" />
+						<input type="image" src="../new/images/btn-go.png" name="Submit" value="Submit" class="button" />
+						<div class="clear"><!-- --></div>
+					</form>
+				</div>
+			</div>
+		
+			
+			<div class="box">
+				<h2>Download this chapter in PDF format</h2>
+				<b><a href="../CH3.PDF">Chapter3.pdf</a></b>
+				<br />
+				<img src="../new/images/adobe-reader.png" alt="" vspace="5" />
+			</div>
+
+			<div class="box">
+				<h2>Table of contents</h2>
+				<ul id="red" class="treeview-red">	 
+					<ul style="border-top:1px solid #aeaeeb;"><li style="border-top:1px solid #aeaeeb;"><a href="../ch1.htm">1: The Breadth and Depth of DSP</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch1/1.htm">The Roots of DSP</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch1/2.htm">Telecommunications</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch1/3.htm">Audio Processing</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch1/4.htm">Echo Location</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch1/5.htm">Image Processing</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch2.htm">2: Statistics, Probability and Noise</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch2/1.htm">Signal and Graph Terminology</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch2/2.htm">Mean and Standard Deviation</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch2/3.htm">Signal vs. Underlying Process</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch2/4.htm">The Histogram, Pmf and Pdf</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch2/5.htm">The Normal Distribution</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch2/6.htm">Digital Noise Generation</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch2/7.htm" style="color:#b4b4e9;">Precision and Accuracy</a></li></ul></li><li class="open" style="border-top:1px solid #aeaeeb;"><a href="../ch3.htm" style="color:#b4b4e9;">3: ADC and DAC</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="1.htm">Quantization</a></li><li style="border-top:1px solid #aeaeeb;"><a href="2.htm">The Sampling Theorem</a></li><li style="border-top:1px solid #aeaeeb;"><a href="3.htm">Digital-to-Analog Conversion</a></li><li style="border-top:1px solid #aeaeeb;"><a href="4.htm">Analog Filters for Data Conversion</a></li><li style="border-top:1px solid #aeaeeb;"><a href="5.htm">Selecting The Antialias Filter</a></li><li style="border-top:1px solid #aeaeeb;"><a href="6.htm">Multirate Data Conversion</a></li><li style="border-top:1px solid #aeaeeb;"><a href="7.htm" style="color:#b4b4e9;">Single Bit Data Conversion</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch4.htm">4: DSP Software</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch4/1.htm">Computer Numbers</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch4/2.htm">Fixed Point (Integers)</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch4/3.htm">Floating Point (Real Numbers)</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch4/4.htm">Number Precision</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch4/5.htm">Execution Speed: Program Language</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch4/6.htm">Execution Speed: Hardware</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch4/7.htm" style="color:#b4b4e9;">Execution Speed: Programming Tips</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch5.htm">5: Linear Systems</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch5/1.htm">Signals and Systems</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch5/2.htm">Requirements for Linearity</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch5/3.htm">Static Linearity and Sinusoidal Fidelity</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch5/4.htm">Examples of Linear and Nonlinear Systems</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch5/5.htm">Special Properties of Linearity</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch5/6.htm">Superposition: the Foundation of DSP</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch5/7.htm" style="color:#b4b4e9;">Common Decompositions</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch5/8.htm">Alternatives to Linearity</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch6.htm">6: Convolution</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch6/1.htm">The Delta Function and Impulse Response</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch6/2.htm">Convolution</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch6/3.htm">The Input Side Algorithm</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch6/4.htm">The Output Side Algorithm</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch6/5.htm">The Sum of Weighted Inputs</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch7.htm">7: Properties of Convolution</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch7/1.htm">Common Impulse Responses</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch7/2.htm">Mathematical Properties</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch7/3.htm">Correlation</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch7/4.htm">Speed</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch8.htm">8: The Discrete Fourier Transform</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch8/1.htm">The Family of Fourier Transform</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch8/2.htm">Notation and Format of the Real DFT</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch8/3.htm">The Frequency Domain's Independent Variable</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch8/4.htm">DFT Basis Functions</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch8/5.htm">Synthesis, Calculating the Inverse DFT</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch8/6.htm">Analysis, Calculating the DFT</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch8/7.htm" style="color:#b4b4e9;">Duality</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch8/8.htm">Polar Notation</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch8/9.htm">Polar Nuisances</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch9.htm">9: Applications of the DFT</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch9/1.htm">Spectral Analysis of Signals</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch9/2.htm">Frequency Response of Systems</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch9/3.htm">Convolution via the Frequency Domain</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch10.htm">10: Fourier Transform Properties</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch10/1.htm">Linearity of the Fourier Transform</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch10/2.htm">Characteristics of the Phase</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch10/3.htm">Periodic Nature of the DFT</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch10/4.htm">Compression and Expansion, Multirate methods</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch10/5.htm">Multiplying Signals (Amplitude Modulation)</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch10/6.htm">The Discrete Time Fourier Transform</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch10/7.htm" style="color:#b4b4e9;">Parseval's Relation</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch11.htm">11: Fourier Transform Pairs</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch11/1.htm">Delta Function Pairs</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch11/2.htm">The Sinc Function</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch11/3.htm">Other Transform Pairs</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch11/4.htm">Gibbs Effect</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch11/5.htm">Harmonics</a></li><li style="border-top:1px solid #aeaeeb;"><a href="http://www.dspguide.com/ch11/6.htm">Chirp Signals</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch12.htm">12: The Fast Fourier Transform</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch12/1.htm">Real DFT Using the Complex DFT</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch12/2.htm">How the FFT works</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch12/3.htm">FFT Programs</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch12/4.htm">Speed and Precision Comparisons</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch12/5.htm">Further Speed Increases</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch13.htm">13: Continuous Signal Processing</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch13/1.htm">The Delta Function</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch13/2.htm">Convolution</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch13/3.htm">The Fourier Transform</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch13/4.htm">The Fourier Series</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch14.htm">14: Introduction to Digital Filters</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch14/1.htm">Filter Basics</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch14/2.htm">How Information is Represented in Signals</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch14/3.htm">Time Domain Parameters</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch14/4.htm">Frequency Domain Parameters</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch14/5.htm">High-Pass, Band-Pass and Band-Reject Filters</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch14/6.htm">Filter Classification</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch15.htm">15: Moving Average Filters</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch15/1.htm">Implementation by Convolution</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch15/2.htm">Noise Reduction vs. Step Response</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch15/3.htm">Frequency Response</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch15/4.htm">Relatives of the Moving Average Filter</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch15/5.htm">Recursive Implementation</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch16.htm">16: Windowed-Sinc Filters</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch16/1.htm">Strategy of the Windowed-Sinc</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch16/2.htm">Designing the Filter</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch16/3.htm">Examples of Windowed-Sinc Filters</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch16/4.htm">Pushing it to the Limit</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch17.htm">17: Custom Filters</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch17/1.htm">Arbitrary Frequency Response</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch17/2.htm">Deconvolution</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch17/3.htm">Optimal Filters</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch18.htm">18: FFT Convolution</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch18/1.htm">The Overlap-Add Method</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch18/2.htm">FFT Convolution</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch18/3.htm">Speed Improvements</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch19.htm">19: Recursive Filters</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch19/1.htm">The Recursive Method</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch19/2.htm">Single Pole Recursive Filters</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch19/3.htm">Narrow-band Filters</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch19/4.htm">Phase Response</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch19/5.htm">Using Integers</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch20.htm">20: Chebyshev Filters</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch20/1.htm">The Chebyshev and Butterworth Responses</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch20/2.htm">Designing the Filter</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch20/3.htm">Step Response Overshoot</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch20/4.htm">Stability</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch21.htm">21: Filter Comparison</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch21/1.htm">Match #1: Analog vs. Digital Filters</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch21/2.htm">Match #2: Windowed-Sinc vs. Chebyshev</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch21/3.htm">Match #3: Moving Average vs. Single Pole</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch22.htm">22: Audio Processing</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch22/1.htm">Human Hearing</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch22/2.htm">Timbre</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch22/3.htm">Sound Quality vs. Data Rate</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch22/4.htm">High Fidelity Audio</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch22/5.htm">Companding</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch22/6.htm">Speech Synthesis and Recognition</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch22/7.htm" style="color:#b4b4e9;">Nonlinear Audio Processing</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch23.htm">23: Image Formation & Display</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch23/1.htm">Digital Image Structure</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch23/2.htm">Cameras and Eyes</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch23/3.htm">Television Video Signals</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch23/4.htm">Other Image Acquisition and Display</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch23/5.htm">Brightness and Contrast Adjustments</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch23/6.htm">Grayscale Transforms</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch23/7.htm" style="color:#b4b4e9;">Warping</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch24.htm">24: Linear Image Processing</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch24/1.htm">Convolution</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch24/2.htm">3x3 Edge Modification</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch24/3.htm">Convolution by Separability</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch24/4.htm">Example of a Large PSF: Illumination Flattening</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch24/5.htm">Fourier Image Analysis</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch24/6.htm">FFT Convolution</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch24/7.htm" style="color:#b4b4e9;">A Closer Look at Image Convolution</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch25.htm">25: Special Imaging Techniques</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch25/1.htm">Spatial Resolution</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch25/2.htm">Sample Spacing and Sampling Aperture</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch25/3.htm">Signal-to-Noise Ratio</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch25/4.htm">Morphological Image Processing</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch25/5.htm">Computed Tomography</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch26.htm">26: Neural Networks (and more!)</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch26/1.htm">Target Detection</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch26/2.htm">Neural Network Architecture</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch26/3.htm">Why Does it Work?</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch26/4.htm">Training the Neural Network</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch26/5.htm">Evaluating the Results</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch26/6.htm">Recursive Filter Design</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch27.htm">27: Data Compression</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch27/1.htm">Data Compression Strategies</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch27/2.htm">Run-Length Encoding</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch27/3.htm">Huffman Encoding</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch27/4.htm">Delta Encoding</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch27/5.htm">LZW Compression</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch27/6.htm">JPEG (Transform Compression)</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch27/7.htm" style="color:#b4b4e9;">MPEG</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch28.htm">28: Digital Signal Processors</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch28/1.htm">How DSPs are Different from Other Microprocessors</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch28/2.htm">Circular Buffering</a></li><li style="border-top:1px solid #aeaeeb;"><a href="http://www.dspguide.com/ch28/3.htm">Architecture of the Digital Signal Processor</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch28/4.htm">Fixed versus Floating Point</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch28/5.htm">C versus Assembly</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch28/6.htm">How Fast are DSPs?</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch28/7.htm" style="color:#b4b4e9;">The Digital Signal Processor Market</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch29.htm">29: Getting Started with DSPs</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="http://www.dspguide.com/ch29/1.htm">The ADSP-2106x family</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch29/2.htm">The SHARC EZ-KIT Lite</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch29/3.htm">Design Example: An FIR Audio Filter</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch29/4.htm">Analog Measurements on a DSP System</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch29/5.htm">Another Look at Fixed versus Floating Point</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch29/6.htm">Advanced Software Tools</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch30.htm">30: Complex Numbers</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch30/1.htm">The Complex Number System</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch30/2.htm">Polar Notation</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch30/3.htm">Using Complex Numbers by Substitution</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch30/4.htm">Complex Representation of Sinusoids</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch30/5.htm">Complex Representation of Systems</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch30/6.htm">Electrical Circuit Analysis</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch31.htm">31: The Complex Fourier Transform</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch31/1.htm">The Real DFT</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch31/2.htm">Mathematical Equivalence</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch31/3.htm">The Complex DFT</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch31/4.htm">The Family of Fourier Transforms</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch31/5.htm">Why the Complex Fourier Transform is Used</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch32.htm">32: The Laplace Transform</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch32/1.htm">The Nature of the s-Domain</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch32/2.htm">Strategy of the Laplace Transform</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch32/3.htm">Analysis of Electric Circuits</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch32/4.htm">The Importance of Poles and Zeros</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch32/5.htm">Filter Design in the s-Domain</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch33.htm">33: The z-Transform</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch33/1.htm">The Nature of the z-Domain</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch33/2.htm">Analysis of Recursive Systems</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch33/3.htm">Cascade and Parallel Stages</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch33/4.htm">Spectral Inversion</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch33/5.htm">Gain Changes</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch33/6.htm">Chebyshev-Butterworth Filter Design</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch33/7.htm" style="color:#b4b4e9;">The Best and Worst of DSP</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch34.htm">34: Explaining Benford's Law</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch34/1.htm">Frank Benford's Discovery</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch34/2.htm">Homomorphic Processing</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch34/3.htm">The Ones Scaling Test</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch34/4.htm">Writing Benford's Law as a Convolution</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch34/5.htm">Solving in the Frequency Domain</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch34/6.htm">Solving Mystery #1</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch34/7.htm" style="color:#b4b4e9;">Solving Mystery #2</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch34/8.htm">More on Following Benford's law</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch34/9.htm">Analysis of the Log-Normal Distribution</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch34/10.htm">The Power of Signal Processing</a></li></ul></li>
+					</ul>
+				</ul>			
+			</div>
+
+			<div class="box">
+				<h2>How to order your own hardcover copy</h2>
+				Wouldn't you rather have a bound book instead of 640 loose pages?<br />
+				Your laser printer will thank you!<br />
+				<b>Order from <a href="http://www.amazon.com/Scientist-Engineers-Digital-Signal-Processing/dp/0966017633/ref=pd_bxgy_b_img_a">Amazon.com</a>.</b>
+			</div>
+
+		
+			
+		</div>	
+
+		<!-- -->		
+		<div id="columnRight">	
+		
+			<div id="adbox">
+				
+			
+			</div>	 
+			
+<div class="breadcrumbs"><a href="../ch3.htm">Chapter 3 - ADC and DAC</a> / Single Bit Data Conversion</div><h2>Chapter 3: ADC and DAC</h2><div class="subTitle">Single Bit Data Conversion</div><p><div style="text-align: justify"><p>A popular technique in telecommunications and high fidelity music
+reproduction is <span style="font-weight: bold">single bit ADC and DAC</span>.  These are multirate techniques where
+a higher sampling rate is traded for a lower number of bits.  In the extreme, only
+a single bit is needed for each sample.  While there are many different circuit
+configurations, most are based on the use of <span style="font-weight: bold">delta modulation</span>.  Three example
+circuits will be presented to give you a flavor of the field.   All of these circuits
+are implemented in IC's, so don't worry where all of the individual transistors
+and op amps should go.  No one is going to ask you to build one of these circuits
+from basic components.</p>
+
+<p>Figure 3-16 shows the block diagram of a typical delta modulator.  The analog
+input is a voice signal with an amplitude of a few volts, while the output signal
+is a stream of digital ones and zeros.   A comparator decides which has the
+greater voltage, the incoming analog signal, or the voltage stored on the
+capacitor.  This decision, in the form of a digital one or zero, is applied to the
+input of the latch.    At each clock pulse, typically at a few hundred kilohertz, 
+the latch transfers whatever digital state appears on its</p>
+
+<div style="text-align: center; margin: 20px;"><img src="../graphics/F_3_16.gif" border="0" alt=""></img></div>
+
+<p>input, to its output.  This latch insures that the output is synchronized with the
+clock, thereby defining the sampling rate, i.e., the rate at which the 1 bit output
+can update itself.  </p>
+
+<p>A feedback loop is formed by taking the digital output and using it to drive an
+electronic switch.  If the output is a digital <i>one</i>, the switch connects the
+capacitor to a <i>positive charge injector</i>.  This is a very loose term for a circuit that
+increases the voltage on the capacitor by a fixed amount, say 1 millivolt per
+clock cycle.   This may be nothing more than a resistor connected to a large
+positive voltage.  If the output is a digital <i>zero</i>, the switch is connected to a
+<i>negative charge injector</i>.  This <i>decreases</i> the voltage on the capacitor by the
+same fixed amount.  </p>
+
+<p>Figure 3-17 illustrates the signals produced by this circuit.  At time equal zero, 
+the analog input and the voltage on the capacitor both start with a voltage of
+zero.  As shown in (a), the input signal suddenly increases to 9.5 volts on the
+eighth clock cycle.   Since the input signal is now more positive than the voltage
+on the capacitor, the digital output changes to a <i>one</i>, as shown in (b).  This
+results in the switch being connected to the positive charge injector, and the
+voltage on the capacitor increasing by a small amount on each clock cycle. 
+Although an increment of 1 volt per clock cycle is shown in (a), this is only for
+illustration, and a value of 1 millivolt is more typical.   This staircase increase
+in the capacitor voltage continues until it exceeds the voltage of the input signal. 
+Here the system reached an equilibrium with the output oscillating between a
+digital one and zero, causing the voltage on the capacitor to oscillate between
+9 volts and 10 volts.  In this manner, the feedback of the circuit forces the
+capacitor voltage to track the voltage of the input signal.  If the input signal
+changes very rapidly, the voltage on the capacitor changes at a constant rate
+until a match is obtained.  This constant rate of change is called the <span style="font-weight: bold">slew rate</span>,
+just as in other electronic devices such as op amps. </p>
+
+<p>Now, consider the characteristics of the delta modulated output signal.  If the
+analog input is<i> increasing</i> in value, the output signal will consist of more ones
+than zeros.  Likewise, if the analog input is <i>decreasing</i> in value, the output will
+consist of more zeros than ones.  If the analog input is constant, the digital
+output will alternate between zero and one with an equal number of each.  Put
+in more general terms,  the relative number of ones versus zeros is directly
+proportional to the <i>slope</i> (derivative) of the analog input. </p>
+
+<p>This circuit is a cheap method of transforming an analog signal into a serial
+stream of ones and zeros for transmission or digital storage.  An especially
+attractive feature is that all the bits have the same meaning, unlike the
+conventional serial format:  <i>start bit, LSB, ,MSB, stop bit</i>.  The circuit at the
+receiver is identical to the feedback portion of the transmitting circuit.  Just as
+the voltage on the capacitor in the transmitting circuit follows the analog input,
+so does the voltage on the capacitor in the receiving circuit.  That is, the
+capacitor voltage shown in (a) also represents how the reconstructed signal
+would appear. </p>
+
+<p>A critical limitation of this circuit is the unavoidable tradeoff between (1)
+maximum slew rate, (2) quantization size, and (3) data rate.  In particular, if the
+maximum slew rate and quantization size are adjusted to acceptable values for
+voice communication, the data rate ends up in the MHz range. This is too high
+to be of commercial value.  For instance, conventional sampling of a voice
+signal requires only about 64,000 bits per second.   </p>
+
+<p>A solution to this problem is shown in Fig. 3-18, the Continuously Variable
+Slope Delta (<span style="font-weight: bold">CVSD</span>) modulator, a technique implemented in the Motorola
+MC3518 family.  In this approach, the clock rate and the quantization size are
+set to something acceptable, say 30 kHz, and 2000 levels.  This results in a
+terrible slew rate, which you correct with additional circuitry.  In operation, a
+shift resister continually looks at the last four bits that the system has produced. 
+If the circuit is in a slew rate limited condition, the last four bits will be all ones
+(positive slope) or all zeros (negative slope).  A logic circuit detects this
+situation and produces an analog signal that increase the level of charge
+produced by the charge injectors.  This boosts the slew rate by increasing the
+size of the voltage steps being applied to the capacitor.</p>
+
+<p>An analog filter is usually placed between the logic circuitry and the charge
+injectors.  This allows the step size to depend on how long the circuit has been
+in a slew limited condition.  As long as the circuit is slew limited, the step size
+keeps getting larger and larger.   This is often called a <i>syllabic filter</i>, since its
+characteristics depend on the average length of the syllables making up speech. 
+With proper optimization (from the chip manufacturer's </p>
+				
+<div style="text-align: center; margin: 20px;"><img src="../graphics/F_3_17.gif" border="0" alt=""></img></div>
+
+<p>spec sheet, not your own work), data rates of 16 to 32 kHz produce acceptable
+quality speech.  The continually changing step size makes the digital data
+difficult to understand, but fortunately, you don't need to.  At the receiver, the
+analog signal is reconstructed by incorporating a syllabic filter that is identical
+to the one in the transmission circuit.  If the two filters are matched, little
+distortion results from the CVSD modulation.  CVSD is probably the easiest
+way to digitally transmit a voice signal.</p>
+
+<p>While CVSD modulation is great for encoding voice signals, it cannot be used
+for general purpose analog-to-digital conversion. Even if you get around the
+fact that the digital data is related to the <i>derivative</i> of the input signal, the
+<i>changing step size</i> will confuse things beyond repair.  In addition, the DC level
+of the analog signal is usually not captured in the digital data. </p>
+
+<p>The <span style="font-weight: bold">delta-sigma</span> converter, shown in Fig. 3-19, eliminates these problems by
+cleverly combining analog electronics with DSP algorithms.  Notice that the
+voltage on the capacitor is now being compared with ground potential.  The
+feedback loop has also been modified so that the voltage on the </p>
+
+<div style="text-align: center; margin: 20px;"><img src="../graphics/F_3_18.gif" border="0" alt=""></img></div>
+
+<p>capacitor is <i>decreased</i> when the circuit's output is a digital <i>one</i>, and <i>increased</i>
+when it is a digital <i>zero</i>.  As the input signal increases and decreases in voltage,
+it tries to raise and lower the voltage on the capacitor.  This change in voltage
+is detected by the comparator, resulting in the charge injectors producing a
+<i>counteracting</i> charge to keep the capacitor at zero volts.  </p>
+
+<p>If the input voltage is positive, the digital output will be composed of more ones
+than zeros.  The excess number of ones being needed to generate the <i>negative</i>
+charge that cancels with the <i>positive</i>  input signal.   Likewise, if the input
+voltage is negative, the digital output will be composed of more zeros than ones,
+providing a net positive charge injection.  If the input signal is equal to zero
+volts, an equal number of ones and zeros will be generated in the output,
+providing an overall charge injection of zero.</p>
+
+<p>The relative number of ones and zeros in the output is now related to the <i>level
+</i>of the input voltage, not the <i>slope</i> as in the previous circuit.   This is much
+simpler.  For instance, you could form a 12 bit ADC by feeding the digital
+output into a counter, and counting the number of <i>ones</i> over 4096 clock cycles. 
+A digital number of 4095 would correspond to the maximum positive input
+voltage.  Likewise, digital number 0 would correspond to the maximum
+negative input voltage, and 2048 would correspond to an input voltage of zero. 
+This also shows the origin of the name, <i>delta-sigma</i>: delta modulation followed
+by summation (sigma).</p>
+
+<p>The ones and zeros produced by this type of delta modulator are very easy to
+transform back into an analog signal.  All that is required is an analog  low-pass
+filter, which might be as simple as a single RC network.  The high </p>
+
+<div style="text-align: center; margin: 20px;"><img src="../graphics/F_3_19.gif" border="0" alt=""></img></div>
+
+<p>and low voltages corresponding to the digital ones and zeros average out to
+form the correct analog voltage. For example, suppose that the ones and zeros
+are represented by 5 volts and 0 volts, respectively.  If 80% of the bits in the
+data stream are <i>ones</i>, and 20% are <i>zeros</i>, the output of the low-pass filter will be
+4 volts.  </p>
+
+<p>This method of transforming the single bit data stream back into the original
+waveform is important for several reasons.   First, it describes a slick way to
+replace the counter in the delta-sigma ADC circuit.   Instead of simply counting
+the pulses from the delta modulator, the binary signal  is passed through a
+<i>digital</i> low-pass filter, and then <i>decimated</i> to reduce the sampling rate.  For
+example, this procedure might start by changing each of the ones and zeros in
+the digital stream into a 12 bit sample; ones become a value of 4095, while
+zeros become a value of 0.   Using a digital low-pass filter on this signal
+produces a digitized version of the original waveform, just as an analog low-pass filter would form an analog recreation.  Decimation then reduces the
+sampling rate by discarding most of the samples.  This results in a digital signal
+that is equivalent to direct sampling of the original waveform. </p>
+
+<p>This approach is used in many commercial ADC's for digitizing voice and other
+audio signals.  An example is the National Semiconductor ADC16071, which
+provides 16 bit analog-to-digital conversion at sampling rates up to  192 kHz. 
+At a sampling rate of 100 kHz, the delta modulator operates with a clock
+frequency of 6.4 MHz.  The low-pass digital filter is a 246 point FIR, such as
+described in Chapter 16.   This removes all frequencies in the digital data above
+50 kHz, ? of the eventual sampling rate.  Conceptually, this can be viewed as
+forming a digital signal at 6.4 MHz, with each sample represented by 16 bits. 
+The signal is then decimated from 6.4 MHz to 100 kHz, accomplished by
+deleting every 63 out of 64 samples.  In actual operation, much more goes on
+inside of this device than described by this simple discussion. </p>
+
+<p>Delta-sigma converters can also be used for digital-to-analog conversion of
+voice and audio signals.    The digital signal is retrieved from memory, and
+converted into a delta modulated stream of ones and zeros.  As mentioned
+above, this single bit signal can easily be changed into the reconstructed analog
+signal with a simple low-pass analog filter.  As with the antialias filter, usually
+only a single RC network is required.  This is because the majority of the
+filtration is handled by the high-performance digital filters.</p>
+
+<p>Delta-sigma ADC's have several quirks that limit their use to specific
+applications.  For example, it is difficult to multiplex their inputs.  When the
+input is switched from one signal to another, proper operation is not established
+until the digital filter can clear itself of data from the previous signal.  Delta-sigma converters are also limited in another respect:  you don't know exactly
+<i>when</i> each sample was taken.  Each acquired sample is a composite of the one
+bit information taken over a segment of the input signal.  This is not a problem
+for signals encoded in the frequency domain, such as audio, but it is a
+significant limitation for time domain encoded signals.  To understand the shape
+of a signal's waveform, you often need to know the precise instant each sample
+was taken.  Lastly, most of these devices are specifically designed for audio
+applications, and their  performance specifications are quoted accordingly.  For
+example, a 16 bit  ADC used for voice signals does not necessarily mean that
+each sample has  16 bits of precision.  Much more likely, the manufacturer is
+stating that  <i>voice signals</i> can be digitized to 16 bits of <i>dynamic range</i>.  Don't
+expect to get a full 16 bits of useful information from this device for general
+purpose data acquisition. </p>
+
+<p>While these explanations and examples provide an introduction to single bit
+ADC and DAC, it must be emphasized that they are simplified descriptions of
+sophisticated DSP and integrated circuit technology.  You wouldn't expect the
+manufacturer to tell their <i>competitors</i> all the internal workings of their chips, so
+don't expect them to tell <i>you</i>.   </p></div></p>			
+
+		</div>
+		<div class="clear"><!-- --></div>
+		
+
+	</div>
+</div>
+
+<!-- Footer -->
+
+<div id="footer">
+	<a href="../index.html">Home</a> | <a href="../pdfbook.htm">The Book by Chapters</a> | <a href="../about.htm">About the Book</a> | <a href="../swsmith.htm">Steven W. Smith</a> | <a href="http://www.dsprelated.com/blogs-1/nf/Steve_Smith.php">Blog</a> | <a href="../contact.htm">Contact</a>
+	<br />
+	Copyright © 1997-2011 by California Technical Publishing
+</div>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-1774944-11");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+</body>
+</html>

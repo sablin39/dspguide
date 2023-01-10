@@ -1,0 +1,306 @@
+	 
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Execution Speed: Hardware</title>
+<link href="../new/css/default.css" rel="stylesheet" type="text/css" />
+
+<script type='text/javascript' src='../new/js/jquery-1.5.js'></script>
+<script type='text/javascript' src='../new/js/jquery.droppy.js'></script>
+<link rel="stylesheet" href="../new/css/droppy.css" type="text/css" />
+<script type='text/javascript' src='../new/js/jcc.js'></script>
+<script>
+$(function(){
+	if($.browser.msie){
+        if($.browser.version.substr(0,1)!="9"){
+            $('#greenBox2').corner({tl:{radius:5}, tr:{radius:5}, bl:{radius:5}, br:{radius:5}, antiAlias:true });
+        }
+    }else{
+        $('#greenBox2').corner({tl:{radius:5}, tr:{radius:5}, bl:{radius:3}, br:{radius:5}, antiAlias:true });
+    }
+});
+</script>
+
+<link rel="stylesheet" href="../new/css/jquery.treeview.css" />
+<script src="../new/js/jquery.cookie.js" type="text/javascript"></script>
+<script src="../new/js/jquery.treeview.js" type="text/javascript"></script>
+<script type="text/javascript" src="../new/js/demo.js"></script>
+
+</head>
+
+<body>
+
+
+<div id="divPage">
+	<div id="wrapper" class="not-logged-in">
+		
+		<!-- Header -->
+		
+<div id="header">
+			<h1>The Scientist and Engineer's Guide to<br />Digital Signal Processing<br /><span class="txtBlue txt26">By Steven W. Smith, Ph.D.</span></h1>
+			<div id="menu">
+				<ul id='nav' style="margin-left:10px;"><li><a href="../index.html">Home</a></li><li><a href="../pdfbook.htm" class="selected">The Book by Chapters</a></li><li class="drop"><a href="../about.htm">About the Book</a>					
+					<ul>						
+						<li><a href="../copyrite.htm">Copyright and permissible use</a></li>							
+						<li><a href="../whatdsp.htm">What is DSP?</a></li>
+						<li><a href="../eightres.htm">8 good reasons for learning DSP</a></li>
+						<li><a href="../reviews.htm">Comments by reviewers</a></li>
+						<li><a href="../errata.htm">Errata</a></li>			
+						<li><a href="http://www.dspguide.com/ch4/download.htm">Free Software and Teaching Aids</a></li>						
+						<li><a href="../editions.htm">Differences Between Editions</a></li>
+					</ul>
+				  </li><li><a href="../swsmith.htm">Steven W. Smith</a></li><li><a href="http://www.dsprelated.com/blogs-1/nf/Steve_Smith.php">Blog</a></li><li><a href="../contact.htm">Contact</a></li>					
+				</ul>
+				<script type="text/javascript">$(function() {$("#nav").droppy();});</script>
+			</div>
+		</div>
+
+		
+		<!-- Content -->
+		
+		<!-- -->		
+		<div id="columnLeft">			
+			
+			<div class="box">
+				<h2>Book Search</h2>
+				<div id="search">
+					<form action="http://www.dspguide.com/search.php" method="post">
+						<input type="text" name="searchfor" class="txtField" />
+						<input type="image" src="../new/images/btn-go.png" name="Submit" value="Submit" class="button" />
+						<div class="clear"><!-- --></div>
+					</form>
+				</div>
+			</div>
+		
+			
+			<div class="box">
+				<h2>Download this chapter in PDF format</h2>
+				<b><a href="../CH4.PDF">Chapter4.pdf</a></b>
+				<br />
+				<img src="../new/images/adobe-reader.png" alt="" vspace="5" />
+			</div>
+
+			<div class="box">
+				<h2>Table of contents</h2>
+				<ul id="red" class="treeview-red">	 
+					<ul style="border-top:1px solid #aeaeeb;"><li style="border-top:1px solid #aeaeeb;"><a href="../ch1.htm">1: The Breadth and Depth of DSP</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch1/1.htm">The Roots of DSP</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch1/2.htm">Telecommunications</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch1/3.htm">Audio Processing</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch1/4.htm">Echo Location</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch1/5.htm">Image Processing</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch2.htm">2: Statistics, Probability and Noise</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch2/1.htm">Signal and Graph Terminology</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch2/2.htm">Mean and Standard Deviation</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch2/3.htm">Signal vs. Underlying Process</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch2/4.htm">The Histogram, Pmf and Pdf</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch2/5.htm">The Normal Distribution</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch2/6.htm" style="color:#b4b4e9;">Digital Noise Generation</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch2/7.htm">Precision and Accuracy</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch3.htm">3: ADC and DAC</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch3/1.htm">Quantization</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch3/2.htm">The Sampling Theorem</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch3/3.htm">Digital-to-Analog Conversion</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch3/4.htm">Analog Filters for Data Conversion</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch3/5.htm">Selecting The Antialias Filter</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch3/6.htm" style="color:#b4b4e9;">Multirate Data Conversion</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch3/7.htm">Single Bit Data Conversion</a></li></ul></li><li class="open" style="border-top:1px solid #aeaeeb;"><a href="../ch4.htm" style="color:#b4b4e9;">4: DSP Software</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="1.htm">Computer Numbers</a></li><li style="border-top:1px solid #aeaeeb;"><a href="2.htm">Fixed Point (Integers)</a></li><li style="border-top:1px solid #aeaeeb;"><a href="3.htm">Floating Point (Real Numbers)</a></li><li style="border-top:1px solid #aeaeeb;"><a href="4.htm">Number Precision</a></li><li style="border-top:1px solid #aeaeeb;"><a href="5.htm">Execution Speed: Program Language</a></li><li style="border-top:1px solid #aeaeeb;"><a href="6.htm" style="color:#b4b4e9;">Execution Speed: Hardware</a></li><li style="border-top:1px solid #aeaeeb;"><a href="7.htm">Execution Speed: Programming Tips</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch5.htm">5: Linear Systems</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch5/1.htm">Signals and Systems</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch5/2.htm">Requirements for Linearity</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch5/3.htm">Static Linearity and Sinusoidal Fidelity</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch5/4.htm">Examples of Linear and Nonlinear Systems</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch5/5.htm">Special Properties of Linearity</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch5/6.htm" style="color:#b4b4e9;">Superposition: the Foundation of DSP</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch5/7.htm">Common Decompositions</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch5/8.htm">Alternatives to Linearity</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch6.htm">6: Convolution</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch6/1.htm">The Delta Function and Impulse Response</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch6/2.htm">Convolution</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch6/3.htm">The Input Side Algorithm</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch6/4.htm">The Output Side Algorithm</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch6/5.htm">The Sum of Weighted Inputs</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch7.htm">7: Properties of Convolution</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch7/1.htm">Common Impulse Responses</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch7/2.htm">Mathematical Properties</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch7/3.htm">Correlation</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch7/4.htm">Speed</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch8.htm">8: The Discrete Fourier Transform</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch8/1.htm">The Family of Fourier Transform</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch8/2.htm">Notation and Format of the Real DFT</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch8/3.htm">The Frequency Domain's Independent Variable</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch8/4.htm">DFT Basis Functions</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch8/5.htm">Synthesis, Calculating the Inverse DFT</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch8/6.htm" style="color:#b4b4e9;">Analysis, Calculating the DFT</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch8/7.htm">Duality</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch8/8.htm">Polar Notation</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch8/9.htm">Polar Nuisances</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch9.htm">9: Applications of the DFT</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch9/1.htm">Spectral Analysis of Signals</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch9/2.htm">Frequency Response of Systems</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch9/3.htm">Convolution via the Frequency Domain</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch10.htm">10: Fourier Transform Properties</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch10/1.htm">Linearity of the Fourier Transform</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch10/2.htm">Characteristics of the Phase</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch10/3.htm">Periodic Nature of the DFT</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch10/4.htm">Compression and Expansion, Multirate methods</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch10/5.htm">Multiplying Signals (Amplitude Modulation)</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch10/6.htm" style="color:#b4b4e9;">The Discrete Time Fourier Transform</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch10/7.htm">Parseval's Relation</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch11.htm">11: Fourier Transform Pairs</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch11/1.htm">Delta Function Pairs</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch11/2.htm">The Sinc Function</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch11/3.htm">Other Transform Pairs</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch11/4.htm">Gibbs Effect</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch11/5.htm">Harmonics</a></li><li style="border-top:1px solid #aeaeeb;"><a href="http://www.dspguide.com/ch11/6.htm" style="color:#b4b4e9;">Chirp Signals</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch12.htm">12: The Fast Fourier Transform</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch12/1.htm">Real DFT Using the Complex DFT</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch12/2.htm">How the FFT works</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch12/3.htm">FFT Programs</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch12/4.htm">Speed and Precision Comparisons</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch12/5.htm">Further Speed Increases</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch13.htm">13: Continuous Signal Processing</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch13/1.htm">The Delta Function</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch13/2.htm">Convolution</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch13/3.htm">The Fourier Transform</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch13/4.htm">The Fourier Series</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch14.htm">14: Introduction to Digital Filters</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch14/1.htm">Filter Basics</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch14/2.htm">How Information is Represented in Signals</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch14/3.htm">Time Domain Parameters</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch14/4.htm">Frequency Domain Parameters</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch14/5.htm">High-Pass, Band-Pass and Band-Reject Filters</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch14/6.htm" style="color:#b4b4e9;">Filter Classification</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch15.htm">15: Moving Average Filters</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch15/1.htm">Implementation by Convolution</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch15/2.htm">Noise Reduction vs. Step Response</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch15/3.htm">Frequency Response</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch15/4.htm">Relatives of the Moving Average Filter</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch15/5.htm">Recursive Implementation</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch16.htm">16: Windowed-Sinc Filters</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch16/1.htm">Strategy of the Windowed-Sinc</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch16/2.htm">Designing the Filter</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch16/3.htm">Examples of Windowed-Sinc Filters</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch16/4.htm">Pushing it to the Limit</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch17.htm">17: Custom Filters</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch17/1.htm">Arbitrary Frequency Response</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch17/2.htm">Deconvolution</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch17/3.htm">Optimal Filters</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch18.htm">18: FFT Convolution</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch18/1.htm">The Overlap-Add Method</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch18/2.htm">FFT Convolution</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch18/3.htm">Speed Improvements</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch19.htm">19: Recursive Filters</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch19/1.htm">The Recursive Method</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch19/2.htm">Single Pole Recursive Filters</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch19/3.htm">Narrow-band Filters</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch19/4.htm">Phase Response</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch19/5.htm">Using Integers</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch20.htm">20: Chebyshev Filters</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch20/1.htm">The Chebyshev and Butterworth Responses</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch20/2.htm">Designing the Filter</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch20/3.htm">Step Response Overshoot</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch20/4.htm">Stability</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch21.htm">21: Filter Comparison</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch21/1.htm">Match #1: Analog vs. Digital Filters</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch21/2.htm">Match #2: Windowed-Sinc vs. Chebyshev</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch21/3.htm">Match #3: Moving Average vs. Single Pole</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch22.htm">22: Audio Processing</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch22/1.htm">Human Hearing</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch22/2.htm">Timbre</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch22/3.htm">Sound Quality vs. Data Rate</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch22/4.htm">High Fidelity Audio</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch22/5.htm">Companding</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch22/6.htm" style="color:#b4b4e9;">Speech Synthesis and Recognition</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch22/7.htm">Nonlinear Audio Processing</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch23.htm">23: Image Formation & Display</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch23/1.htm">Digital Image Structure</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch23/2.htm">Cameras and Eyes</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch23/3.htm">Television Video Signals</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch23/4.htm">Other Image Acquisition and Display</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch23/5.htm">Brightness and Contrast Adjustments</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch23/6.htm" style="color:#b4b4e9;">Grayscale Transforms</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch23/7.htm">Warping</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch24.htm">24: Linear Image Processing</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch24/1.htm">Convolution</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch24/2.htm">3x3 Edge Modification</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch24/3.htm">Convolution by Separability</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch24/4.htm">Example of a Large PSF: Illumination Flattening</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch24/5.htm">Fourier Image Analysis</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch24/6.htm" style="color:#b4b4e9;">FFT Convolution</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch24/7.htm">A Closer Look at Image Convolution</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch25.htm">25: Special Imaging Techniques</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch25/1.htm">Spatial Resolution</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch25/2.htm">Sample Spacing and Sampling Aperture</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch25/3.htm">Signal-to-Noise Ratio</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch25/4.htm">Morphological Image Processing</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch25/5.htm">Computed Tomography</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch26.htm">26: Neural Networks (and more!)</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch26/1.htm">Target Detection</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch26/2.htm">Neural Network Architecture</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch26/3.htm">Why Does it Work?</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch26/4.htm">Training the Neural Network</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch26/5.htm">Evaluating the Results</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch26/6.htm" style="color:#b4b4e9;">Recursive Filter Design</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch27.htm">27: Data Compression</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch27/1.htm">Data Compression Strategies</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch27/2.htm">Run-Length Encoding</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch27/3.htm">Huffman Encoding</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch27/4.htm">Delta Encoding</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch27/5.htm">LZW Compression</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch27/6.htm" style="color:#b4b4e9;">JPEG (Transform Compression)</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch27/7.htm">MPEG</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch28.htm">28: Digital Signal Processors</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch28/1.htm">How DSPs are Different from Other Microprocessors</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch28/2.htm">Circular Buffering</a></li><li style="border-top:1px solid #aeaeeb;"><a href="http://www.dspguide.com/ch28/3.htm">Architecture of the Digital Signal Processor</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch28/4.htm">Fixed versus Floating Point</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch28/5.htm">C versus Assembly</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch28/6.htm" style="color:#b4b4e9;">How Fast are DSPs?</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch28/7.htm">The Digital Signal Processor Market</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch29.htm">29: Getting Started with DSPs</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="http://www.dspguide.com/ch29/1.htm">The ADSP-2106x family</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch29/2.htm">The SHARC EZ-KIT Lite</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch29/3.htm">Design Example: An FIR Audio Filter</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch29/4.htm">Analog Measurements on a DSP System</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch29/5.htm">Another Look at Fixed versus Floating Point</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch29/6.htm" style="color:#b4b4e9;">Advanced Software Tools</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch30.htm">30: Complex Numbers</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch30/1.htm">The Complex Number System</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch30/2.htm">Polar Notation</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch30/3.htm">Using Complex Numbers by Substitution</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch30/4.htm">Complex Representation of Sinusoids</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch30/5.htm">Complex Representation of Systems</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch30/6.htm" style="color:#b4b4e9;">Electrical Circuit Analysis</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch31.htm">31: The Complex Fourier Transform</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch31/1.htm">The Real DFT</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch31/2.htm">Mathematical Equivalence</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch31/3.htm">The Complex DFT</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch31/4.htm">The Family of Fourier Transforms</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch31/5.htm">Why the Complex Fourier Transform is Used</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch32.htm">32: The Laplace Transform</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch32/1.htm">The Nature of the s-Domain</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch32/2.htm">Strategy of the Laplace Transform</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch32/3.htm">Analysis of Electric Circuits</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch32/4.htm">The Importance of Poles and Zeros</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch32/5.htm">Filter Design in the s-Domain</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch33.htm">33: The z-Transform</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch33/1.htm">The Nature of the z-Domain</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch33/2.htm">Analysis of Recursive Systems</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch33/3.htm">Cascade and Parallel Stages</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch33/4.htm">Spectral Inversion</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch33/5.htm">Gain Changes</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch33/6.htm" style="color:#b4b4e9;">Chebyshev-Butterworth Filter Design</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch33/7.htm">The Best and Worst of DSP</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch34.htm">34: Explaining Benford's Law</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch34/1.htm">Frank Benford's Discovery</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch34/2.htm">Homomorphic Processing</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch34/3.htm">The Ones Scaling Test</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch34/4.htm">Writing Benford's Law as a Convolution</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch34/5.htm">Solving in the Frequency Domain</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch34/6.htm" style="color:#b4b4e9;">Solving Mystery #1</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch34/7.htm">Solving Mystery #2</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch34/8.htm">More on Following Benford's law</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch34/9.htm">Analysis of the Log-Normal Distribution</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch34/10.htm">The Power of Signal Processing</a></li></ul></li>
+					</ul>
+				</ul>			
+			</div>
+
+			<div class="box">
+				<h2>How to order your own hardcover copy</h2>
+				Wouldn't you rather have a bound book instead of 640 loose pages?<br />
+				Your laser printer will thank you!<br />
+				<b>Order from <a href="http://www.amazon.com/Scientist-Engineers-Digital-Signal-Processing/dp/0966017633/ref=pd_bxgy_b_img_a">Amazon.com</a>.</b>
+			</div>
+
+		
+			
+		</div>	
+
+		<!-- -->		
+		<div id="columnRight">	
+		
+			<div id="adbox">
+				
+			
+			</div>	 
+			
+<div class="breadcrumbs"><a href="../ch4.htm">Chapter 4 - DSP Software</a> / Execution Speed: Hardware</div><h2>Chapter 4: DSP Software</h2><div class="subTitle">Execution Speed: Hardware</div><p><div style="text-align: justify"><p>Computing power is increasing so rapidly, any <i>book</i> on the subject will be
+obsolete before it is published.  It's an author's nightmare!  The original IBM PC
+was introduced in 1981, based around the 8088 microprocessor with a 4.77
+MHz clock and an 8 bit data bus.  This was followed by a new generation of
+personal computers being introduced every 3-4 years:  8088 &rarr; 80286 &#8594; 80386
+&#8594; 80486 &#8594; 80586 (Pentium).  Each of these new systems boosted the
+computing speed by a factor of about <i>five </i>over the previous technology.   By
+1996, the clock speed had increased to  200 MHz, and the data bus to 32 bits. 
+With other improvements, this resulted in an increase in computing power of
+nearly <i>one thousand</i> in only 15 years!   You should expect <i>another</i> factor of one
+thousand in the <i>next</i> 15 years. </p>
+
+<p>The only way to obtain up-to-date information in this rapidly changing field is
+directly from the manufacturers:  advertisements, specification sheets,  price
+lists, etc.  Forget books for performance data, look in magazines and your daily
+newspaper.  Expect that raw computational speed will more than double each
+two years.  Learning about the current state of computer power is simply not
+enough; you need to understand and track how it is evolving.  </p>
+<p>Keeping this in mind, we can jump into an overview of how execution speed is
+limited by computer hardware. Since computers are composed of many
+subsystems, the time required to execute a particular task will depend on two
+primary factors: (1) the speed of the individual subsystems, and (2) the time it
+takes to transfer data between these blocks. Figure 4-5 shows a simplified
+diagram of the most important speed limiting components in a typical personnel
+computer. The <span style="font-weight: bold">Central Processing Unit (CPU)</span> is the heart of the system.  As
+previously described, it consists of a dozen or so registers, each capable of
+holding 32 bits (in present generation personnel computers).  Also included in
+the CPU is the digital electronics needed for rudimentary operations, such as
+moving bits around and fixed point  arithmetic. </p>
+
+<p>More involved mathematics is handled by transferring the data to a special
+hardware circuit called a <span style="font-weight: bold">math coprocessor</span> (also called an <span style="font-weight: bold">arithmetic logic
+unit</span>, or <span style="font-weight: bold">ALU</span>).  The math coprocessor may be contained in the same chip as the
+CPU, or it may be a separate electronic device.  For example, the addition of
+two floating point numbers would require the CPU to transfer 8 bytes (4 for
+each number) to the math coprocessor, and several bytes that describe what to
+do with the data.  After a short computational time, the math coprocessor would
+pass four bytes back to the CPU, containing the floating point number that is the
+sum.  The most inexpensive computer systems don't have a math coprocessor,
+or provide it only as an option.  For example, the 80486DX microprocessor has
+an internal math coprocessor, while the 80486SX does not.  These lower
+performance systems replace <i>hardware</i> with <i>software</i>.  Each of the mathematical
+functions is broken into </p>
+
+<div style="text-align: center; margin: 20px;"><img src="../graphics/F_4_5.gif" border="0" alt=""></img></div>
+
+<p>elementary binary operations that can be handled directly within the CPU. 
+While this provides the same result, the execution time is much slower, say, a
+factor of 10 to 20. </p>
+
+<p>Most personal computer software can be used with or without a math
+coprocessor.  This is accomplished by having the compiler generate machine
+code to handle both cases, all stored in the final executable program.  If a math
+coprocessor is present on the particular computer being used, one section of the
+code will be run.  If a math coprocessor is not present, the other section of the
+code will be used.   The compiler can also be directed to generate code for only
+one of these situations.  For example, you will occasionally find a program that
+requires that a math coprocessor be present, and will crash if run on a computer
+that does not have one. Applications such as word processing usually do not
+benefit from a math coprocessor.  This is because they involve moving data
+around in memory,  not the calculation of mathematical expressions.  Likewise,
+calculations involving fixed point variables (integers) are unaffected by the
+presence of a math coprocessor, since they are handled within the CPU.  On the
+other hand, the execution speed of DSP and other computational programs using
+floating point calculations can be an order of magnitude different with and
+without a math coprocessor. </p>
+
+<p>The CPU and main memory are contained in separate chips in most computer
+systems.  For obvious reasons, you would like the main memory  to be very
+large and very fast.  Unfortunately, this makes the memory very expensive.  The
+transfer of data between the main memory and the CPU is a very common
+bottleneck for speed.  The CPU <i>asks</i> the main memory for the binary
+information at a particular memory address, and then must <i>wait</i> to receive the
+information. A common technique to get around this problem is to use a
+<span style="font-weight: bold">memory cache</span>.  This is a small amount of very fast memory used as a buffer
+between the CPU and the main memory.  A few hundred kilobytes is typical. 
+When the CPU requests the main memory to provide the binary data at a
+particular address, high speed digital electronics copies a <i>section</i> of the main
+memory around this address into the memory cache.  The next time that the
+CPU requests memory information, it is very likely that it will already be
+contained in the memory cache, making the retrieval very rapid.  This is based
+on the fact that programs tend to access memory locations that are nearby
+neighbors of previously accessed data.  In typical personnel computer
+applications, the addition of a memory cache can improve the overall speed by
+several times.  The memory cache may be in the same chip as the CPU, or it
+may be an external electronic device. </p>
+
+<p>The rate at which data can be transferred between subsystems depends on the
+number of parallel data lines provided, and the maximum rate that digital
+signals that can be passed along each line.  Digital data can generally be
+transferred at a much higher rate within a single chip as compared to
+transferring data between chips.  Likewise, data paths that must pass through
+electrical connectors to other printed circuit boards (i.e., a bus structure) will be
+slower still.  This is a strong motivation for stuffing as much electronics as
+possible inside the CPU. </p>
+
+<p>A particularly nasty problem for computer speed is <i>backward compatibility</i>.
+When a computer company introduces a new product, say a data acquisition
+card or a software program, they want to sell it into the largest possible market. 
+This means that it must be compatible with most of the computers currently in
+use, which could span several generations of technology.  This frequently limits
+the performance of the hardware or software to that of a much older system. 
+For example, suppose you buy an I/O card that plugs into the bus of your 200
+MHz Pentium personal computer, providing you with eight digital lines that can
+transmit and receive data one byte at a time.  You then write an assembly
+program to rapidly transfer data between your computer and some external
+device, such as a scientific experiment or another computer.  Much to your
+surprise, the maximum data transfer rate is only about 100,000 bytes per
+second, more than <i>one thousand</i> times slower than the microprocessor clock
+rate!  The villain is the ISA bus, a technology that is <i>backward compatible</i> to the
+computers of the early 1980s. </p>
+
+<p>Table 4-6 provides execution times for several generations of computers. 
+Obviously, you should treat these as very rough approximations.  If you want
+to understand <i>your</i> system, take measurements on <i>your</i> system.  It's quite easy;
+write a loop that executes a <i>million</i> of some operation, and use your watch to
+time how long it takes.  The first three systems, the 80286, 80486, and  Pentium,
+are the standard desk-top personal computers of 1986, 1993 and 1996,
+respectively. The forth is a 1994 microprocessor designed especially for DSP
+tasks, the Texas Instruments TMS320C40. </p>
+
+
+<div style="text-align: center; margin: 20px;"><img src="../graphics/T_4_6.gif" border="0" alt=""></img></div>
+
+
+<p>The Pentium is faster than the 80286 system for four reasons, (1) the greater
+clock speed, (2) more lines in the data bus, (3) the addition of a memory cache,
+and (4) a more efficient internal design, requiring fewer clock cycles per
+instruction.</p>
+
+<p>If the Pentium was a Cadillac, the TMS320C40 would be a Ferrari: less comfort,
+but blinding speed.  This chip is representative of several micro-processors
+specifically designed to decrease the execution time of DSP algorithms. Others
+in this category are the Intel i860, AT&amp;T DSP3210,  Motorola  DSP96002, and
+the Analog Devices ADSP-2171.  These often go by the name: <span style="font-weight: bold">DSP
+microprocessor</span>, or <span style="font-weight: bold">RISC</span> (Reduced Instruction Set Computer).  This last name
+reflects that the increased speed results from fewer assembly level instructions
+being made available to the programmer. In comparison, more traditional
+microprocessors, such as the Pentium, are called <span style="font-weight: bold">CISC</span> (Complex Instruction
+Set Computer).    </p>
+
+<p>DSP microprocessors are used in two ways: as slave modules under the control
+of a more conventional computer, or as an imbedded processor in a dedicated
+application, such as a cellular telephone.   Some models only handle fixed point
+numbers, while others can work with floating point.  The internal architecture
+used to obtain the increased speed includes:  (1) lots of very fast cache memory
+contained within the chip, (2) separate buses for the program and data, allowing
+the two to be accessed simultaneously (called a <span style="font-weight: bold">Harvard Architecture</span>), (3) fast
+hardware for math calculations contained directly in the microprocessor, and (4)
+a <i>pipeline</i> design.</p>
+
+<p>A <span style="font-weight: bold">pipeline</span> architecture breaks the <i>hardware</i> required for a certain task into
+several successive stages.  For example, the addition of two numbers may be
+done in three pipeline stages.  The first stage of the pipeline does nothing but
+fetch the numbers to be added from memory.  The only task of the second stage
+is to add the two numbers together.  The third stage does nothing but store the
+result in memory.  If each stage can complete its task in a single clock cycle, the
+entire procedure will take three clock cycles to execute.  The key feature of the
+pipeline structure is that another task can be started before the previous task is
+completed.  In this example, we could begin the addition of <i>another</i> two
+numbers as soon as the first stage is idle, at the end of the first clock cycle.   For
+a large number of operations, the speed of the system will be quoted as one
+addition per clock cycle, even though the addition of any two numbers requires
+three clock cycles to complete.  Pipelines are great for speed, but they can be
+difficult to program.  The algorithm must allow a new calculation to begin, even
+though  the results of previous calculations are unavailable (because they are
+still in the pipeline). </p></div></p>Next Section: <a href="7.htm">Execution Speed: Programming Tips</a>			
+
+		</div>
+		<div class="clear"><!-- --></div>
+		
+
+	</div>
+</div>
+
+<!-- Footer -->
+
+<div id="footer">
+	<a href="../index.html">Home</a> | <a href="../pdfbook.htm">The Book by Chapters</a> | <a href="../about.htm">About the Book</a> | <a href="../swsmith.htm">Steven W. Smith</a> | <a href="http://www.dsprelated.com/blogs-1/nf/Steve_Smith.php">Blog</a> | <a href="../contact.htm">Contact</a>
+	<br />
+	Copyright © 1997-2011 by California Technical Publishing
+</div>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-1774944-11");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+</body>
+</html>

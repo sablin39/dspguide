@@ -1,0 +1,264 @@
+	 
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Example of a Large PSF: Illumination Flattening</title>
+<link href="../new/css/default.css" rel="stylesheet" type="text/css" />
+
+<script type='text/javascript' src='../new/js/jquery-1.5.js'></script>
+<script type='text/javascript' src='../new/js/jquery.droppy.js'></script>
+<link rel="stylesheet" href="../new/css/droppy.css" type="text/css" />
+<script type='text/javascript' src='../new/js/jcc.js'></script>
+<script>
+$(function(){
+	if($.browser.msie){
+        if($.browser.version.substr(0,1)!="9"){
+            $('#greenBox2').corner({tl:{radius:5}, tr:{radius:5}, bl:{radius:5}, br:{radius:5}, antiAlias:true });
+        }
+    }else{
+        $('#greenBox2').corner({tl:{radius:5}, tr:{radius:5}, bl:{radius:3}, br:{radius:5}, antiAlias:true });
+    }
+});
+</script>
+
+<link rel="stylesheet" href="../new/css/jquery.treeview.css" />
+<script src="../new/js/jquery.cookie.js" type="text/javascript"></script>
+<script src="../new/js/jquery.treeview.js" type="text/javascript"></script>
+<script type="text/javascript" src="../new/js/demo.js"></script>
+
+</head>
+
+<body>
+
+
+<div id="divPage">
+	<div id="wrapper" class="not-logged-in">
+		
+		<!-- Header -->
+		
+<div id="header">
+			<h1>The Scientist and Engineer's Guide to<br />Digital Signal Processing<br /><span class="txtBlue txt26">By Steven W. Smith, Ph.D.</span></h1>
+			<div id="menu">
+				<ul id='nav' style="margin-left:10px;"><li><a href="../index.html">Home</a></li><li><a href="../pdfbook.htm" class="selected">The Book by Chapters</a></li><li class="drop"><a href="../about.htm">About the Book</a>					
+					<ul>						
+						<li><a href="../copyrite.htm">Copyright and permissible use</a></li>							
+						<li><a href="../whatdsp.htm">What is DSP?</a></li>
+						<li><a href="../eightres.htm">8 good reasons for learning DSP</a></li>
+						<li><a href="../reviews.htm">Comments by reviewers</a></li>
+						<li><a href="../errata.htm">Errata</a></li>			
+						<li><a href="http://www.dspguide.com/ch24/download.htm">Free Software and Teaching Aids</a></li>						
+						<li><a href="../editions.htm">Differences Between Editions</a></li>
+					</ul>
+				  </li><li><a href="../swsmith.htm">Steven W. Smith</a></li><li><a href="http://www.dsprelated.com/blogs-1/nf/Steve_Smith.php">Blog</a></li><li><a href="../contact.htm">Contact</a></li>					
+				</ul>
+				<script type="text/javascript">$(function() {$("#nav").droppy();});</script>
+			</div>
+		</div>
+
+		
+		<!-- Content -->
+		
+		<!-- -->		
+		<div id="columnLeft">			
+			
+			<div class="box">
+				<h2>Book Search</h2>
+				<div id="search">
+					<form action="http://www.dspguide.com/search.php" method="post">
+						<input type="text" name="searchfor" class="txtField" />
+						<input type="image" src="../new/images/btn-go.png" name="Submit" value="Submit" class="button" />
+						<div class="clear"><!-- --></div>
+					</form>
+				</div>
+			</div>
+		
+			
+			<div class="box">
+				<h2>Download this chapter in PDF format</h2>
+				<b><a href="../CH24.PDF">Chapter24.pdf</a></b>
+				<br />
+				<img src="../new/images/adobe-reader.png" alt="" vspace="5" />
+			</div>
+
+			<div class="box">
+				<h2>Table of contents</h2>
+				<ul id="red" class="treeview-red">	 
+					<ul style="border-top:1px solid #aeaeeb;"><li style="border-top:1px solid #aeaeeb;"><a href="../ch1.htm">1: The Breadth and Depth of DSP</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch1/1.htm">The Roots of DSP</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch1/2.htm">Telecommunications</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch1/3.htm">Audio Processing</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch1/4.htm" style="color:#b4b4e9;">Echo Location</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch1/5.htm">Image Processing</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch2.htm">2: Statistics, Probability and Noise</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch2/1.htm">Signal and Graph Terminology</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch2/2.htm">Mean and Standard Deviation</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch2/3.htm">Signal vs. Underlying Process</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch2/4.htm" style="color:#b4b4e9;">The Histogram, Pmf and Pdf</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch2/5.htm">The Normal Distribution</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch2/6.htm">Digital Noise Generation</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch2/7.htm">Precision and Accuracy</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch3.htm">3: ADC and DAC</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch3/1.htm">Quantization</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch3/2.htm">The Sampling Theorem</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch3/3.htm">Digital-to-Analog Conversion</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch3/4.htm" style="color:#b4b4e9;">Analog Filters for Data Conversion</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch3/5.htm">Selecting The Antialias Filter</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch3/6.htm">Multirate Data Conversion</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch3/7.htm">Single Bit Data Conversion</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch4.htm">4: DSP Software</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch4/1.htm">Computer Numbers</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch4/2.htm">Fixed Point (Integers)</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch4/3.htm">Floating Point (Real Numbers)</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch4/4.htm" style="color:#b4b4e9;">Number Precision</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch4/5.htm">Execution Speed: Program Language</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch4/6.htm">Execution Speed: Hardware</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch4/7.htm">Execution Speed: Programming Tips</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch5.htm">5: Linear Systems</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch5/1.htm">Signals and Systems</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch5/2.htm">Requirements for Linearity</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch5/3.htm">Static Linearity and Sinusoidal Fidelity</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch5/4.htm" style="color:#b4b4e9;">Examples of Linear and Nonlinear Systems</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch5/5.htm">Special Properties of Linearity</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch5/6.htm">Superposition: the Foundation of DSP</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch5/7.htm">Common Decompositions</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch5/8.htm">Alternatives to Linearity</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch6.htm">6: Convolution</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch6/1.htm">The Delta Function and Impulse Response</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch6/2.htm">Convolution</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch6/3.htm">The Input Side Algorithm</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch6/4.htm" style="color:#b4b4e9;">The Output Side Algorithm</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch6/5.htm">The Sum of Weighted Inputs</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch7.htm">7: Properties of Convolution</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch7/1.htm">Common Impulse Responses</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch7/2.htm">Mathematical Properties</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch7/3.htm">Correlation</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch7/4.htm" style="color:#b4b4e9;">Speed</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch8.htm">8: The Discrete Fourier Transform</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch8/1.htm">The Family of Fourier Transform</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch8/2.htm">Notation and Format of the Real DFT</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch8/3.htm">The Frequency Domain's Independent Variable</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch8/4.htm" style="color:#b4b4e9;">DFT Basis Functions</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch8/5.htm">Synthesis, Calculating the Inverse DFT</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch8/6.htm">Analysis, Calculating the DFT</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch8/7.htm">Duality</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch8/8.htm">Polar Notation</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch8/9.htm">Polar Nuisances</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch9.htm">9: Applications of the DFT</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch9/1.htm">Spectral Analysis of Signals</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch9/2.htm">Frequency Response of Systems</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch9/3.htm">Convolution via the Frequency Domain</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch10.htm">10: Fourier Transform Properties</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch10/1.htm">Linearity of the Fourier Transform</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch10/2.htm">Characteristics of the Phase</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch10/3.htm">Periodic Nature of the DFT</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch10/4.htm" style="color:#b4b4e9;">Compression and Expansion, Multirate methods</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch10/5.htm">Multiplying Signals (Amplitude Modulation)</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch10/6.htm">The Discrete Time Fourier Transform</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch10/7.htm">Parseval's Relation</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch11.htm">11: Fourier Transform Pairs</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch11/1.htm">Delta Function Pairs</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch11/2.htm">The Sinc Function</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch11/3.htm">Other Transform Pairs</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch11/4.htm" style="color:#b4b4e9;">Gibbs Effect</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch11/5.htm">Harmonics</a></li><li style="border-top:1px solid #aeaeeb;"><a href="http://www.dspguide.com/ch11/6.htm">Chirp Signals</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch12.htm">12: The Fast Fourier Transform</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch12/1.htm">Real DFT Using the Complex DFT</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch12/2.htm">How the FFT works</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch12/3.htm">FFT Programs</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch12/4.htm" style="color:#b4b4e9;">Speed and Precision Comparisons</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch12/5.htm">Further Speed Increases</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch13.htm">13: Continuous Signal Processing</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch13/1.htm">The Delta Function</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch13/2.htm">Convolution</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch13/3.htm">The Fourier Transform</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch13/4.htm" style="color:#b4b4e9;">The Fourier Series</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch14.htm">14: Introduction to Digital Filters</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch14/1.htm">Filter Basics</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch14/2.htm">How Information is Represented in Signals</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch14/3.htm">Time Domain Parameters</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch14/4.htm" style="color:#b4b4e9;">Frequency Domain Parameters</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch14/5.htm">High-Pass, Band-Pass and Band-Reject Filters</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch14/6.htm">Filter Classification</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch15.htm">15: Moving Average Filters</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch15/1.htm">Implementation by Convolution</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch15/2.htm">Noise Reduction vs. Step Response</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch15/3.htm">Frequency Response</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch15/4.htm" style="color:#b4b4e9;">Relatives of the Moving Average Filter</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch15/5.htm">Recursive Implementation</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch16.htm">16: Windowed-Sinc Filters</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch16/1.htm">Strategy of the Windowed-Sinc</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch16/2.htm">Designing the Filter</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch16/3.htm">Examples of Windowed-Sinc Filters</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch16/4.htm" style="color:#b4b4e9;">Pushing it to the Limit</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch17.htm">17: Custom Filters</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch17/1.htm">Arbitrary Frequency Response</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch17/2.htm">Deconvolution</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch17/3.htm">Optimal Filters</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch18.htm">18: FFT Convolution</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch18/1.htm">The Overlap-Add Method</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch18/2.htm">FFT Convolution</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch18/3.htm">Speed Improvements</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch19.htm">19: Recursive Filters</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch19/1.htm">The Recursive Method</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch19/2.htm">Single Pole Recursive Filters</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch19/3.htm">Narrow-band Filters</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch19/4.htm" style="color:#b4b4e9;">Phase Response</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch19/5.htm">Using Integers</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch20.htm">20: Chebyshev Filters</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch20/1.htm">The Chebyshev and Butterworth Responses</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch20/2.htm">Designing the Filter</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch20/3.htm">Step Response Overshoot</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch20/4.htm" style="color:#b4b4e9;">Stability</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch21.htm">21: Filter Comparison</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch21/1.htm">Match #1: Analog vs. Digital Filters</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch21/2.htm">Match #2: Windowed-Sinc vs. Chebyshev</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch21/3.htm">Match #3: Moving Average vs. Single Pole</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch22.htm">22: Audio Processing</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch22/1.htm">Human Hearing</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch22/2.htm">Timbre</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch22/3.htm">Sound Quality vs. Data Rate</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch22/4.htm" style="color:#b4b4e9;">High Fidelity Audio</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch22/5.htm">Companding</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch22/6.htm">Speech Synthesis and Recognition</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch22/7.htm">Nonlinear Audio Processing</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch23.htm">23: Image Formation & Display</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch23/1.htm">Digital Image Structure</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch23/2.htm">Cameras and Eyes</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch23/3.htm">Television Video Signals</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch23/4.htm" style="color:#b4b4e9;">Other Image Acquisition and Display</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch23/5.htm">Brightness and Contrast Adjustments</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch23/6.htm">Grayscale Transforms</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch23/7.htm">Warping</a></li></ul></li><li class="open" style="border-top:1px solid #aeaeeb;"><a href="../ch24.htm" style="color:#b4b4e9;">24: Linear Image Processing</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="1.htm">Convolution</a></li><li style="border-top:1px solid #aeaeeb;"><a href="2.htm">3x3 Edge Modification</a></li><li style="border-top:1px solid #aeaeeb;"><a href="3.htm">Convolution by Separability</a></li><li style="border-top:1px solid #aeaeeb;"><a href="4.htm" style="color:#b4b4e9;">Example of a Large PSF: Illumination Flattening</a></li><li style="border-top:1px solid #aeaeeb;"><a href="5.htm">Fourier Image Analysis</a></li><li style="border-top:1px solid #aeaeeb;"><a href="6.htm">FFT Convolution</a></li><li style="border-top:1px solid #aeaeeb;"><a href="7.htm">A Closer Look at Image Convolution</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch25.htm">25: Special Imaging Techniques</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch25/1.htm">Spatial Resolution</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch25/2.htm">Sample Spacing and Sampling Aperture</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch25/3.htm">Signal-to-Noise Ratio</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch25/4.htm" style="color:#b4b4e9;">Morphological Image Processing</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch25/5.htm">Computed Tomography</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch26.htm">26: Neural Networks (and more!)</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch26/1.htm">Target Detection</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch26/2.htm">Neural Network Architecture</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch26/3.htm">Why Does it Work?</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch26/4.htm" style="color:#b4b4e9;">Training the Neural Network</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch26/5.htm">Evaluating the Results</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch26/6.htm">Recursive Filter Design</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch27.htm">27: Data Compression</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch27/1.htm">Data Compression Strategies</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch27/2.htm">Run-Length Encoding</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch27/3.htm">Huffman Encoding</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch27/4.htm" style="color:#b4b4e9;">Delta Encoding</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch27/5.htm">LZW Compression</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch27/6.htm">JPEG (Transform Compression)</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch27/7.htm">MPEG</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch28.htm">28: Digital Signal Processors</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch28/1.htm">How DSPs are Different from Other Microprocessors</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch28/2.htm">Circular Buffering</a></li><li style="border-top:1px solid #aeaeeb;"><a href="http://www.dspguide.com/ch28/3.htm">Architecture of the Digital Signal Processor</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch28/4.htm" style="color:#b4b4e9;">Fixed versus Floating Point</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch28/5.htm">C versus Assembly</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch28/6.htm">How Fast are DSPs?</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch28/7.htm">The Digital Signal Processor Market</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch29.htm">29: Getting Started with DSPs</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="http://www.dspguide.com/ch29/1.htm">The ADSP-2106x family</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch29/2.htm">The SHARC EZ-KIT Lite</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch29/3.htm">Design Example: An FIR Audio Filter</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch29/4.htm" style="color:#b4b4e9;">Analog Measurements on a DSP System</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch29/5.htm">Another Look at Fixed versus Floating Point</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch29/6.htm">Advanced Software Tools</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch30.htm">30: Complex Numbers</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch30/1.htm">The Complex Number System</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch30/2.htm">Polar Notation</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch30/3.htm">Using Complex Numbers by Substitution</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch30/4.htm" style="color:#b4b4e9;">Complex Representation of Sinusoids</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch30/5.htm">Complex Representation of Systems</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch30/6.htm">Electrical Circuit Analysis</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch31.htm">31: The Complex Fourier Transform</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch31/1.htm">The Real DFT</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch31/2.htm">Mathematical Equivalence</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch31/3.htm">The Complex DFT</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch31/4.htm" style="color:#b4b4e9;">The Family of Fourier Transforms</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch31/5.htm">Why the Complex Fourier Transform is Used</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch32.htm">32: The Laplace Transform</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch32/1.htm">The Nature of the s-Domain</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch32/2.htm">Strategy of the Laplace Transform</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch32/3.htm">Analysis of Electric Circuits</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch32/4.htm" style="color:#b4b4e9;">The Importance of Poles and Zeros</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch32/5.htm">Filter Design in the s-Domain</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch33.htm">33: The z-Transform</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch33/1.htm">The Nature of the z-Domain</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch33/2.htm">Analysis of Recursive Systems</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch33/3.htm">Cascade and Parallel Stages</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch33/4.htm" style="color:#b4b4e9;">Spectral Inversion</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch33/5.htm">Gain Changes</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch33/6.htm">Chebyshev-Butterworth Filter Design</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch33/7.htm">The Best and Worst of DSP</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch34.htm">34: Explaining Benford's Law</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch34/1.htm">Frank Benford's Discovery</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch34/2.htm">Homomorphic Processing</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch34/3.htm">The Ones Scaling Test</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch34/4.htm" style="color:#b4b4e9;">Writing Benford's Law as a Convolution</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch34/5.htm">Solving in the Frequency Domain</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch34/6.htm">Solving Mystery #1</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch34/7.htm">Solving Mystery #2</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch34/8.htm">More on Following Benford's law</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch34/9.htm">Analysis of the Log-Normal Distribution</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch34/10.htm">The Power of Signal Processing</a></li></ul></li>
+					</ul>
+				</ul>			
+			</div>
+
+			<div class="box">
+				<h2>How to order your own hardcover copy</h2>
+				Wouldn't you rather have a bound book instead of 640 loose pages?<br />
+				Your laser printer will thank you!<br />
+				<b>Order from <a href="http://www.amazon.com/Scientist-Engineers-Digital-Signal-Processing/dp/0966017633/ref=pd_bxgy_b_img_a">Amazon.com</a>.</b>
+			</div>
+
+		
+			
+		</div>	
+
+		<!-- -->		
+		<div id="columnRight">	
+		
+			<div id="adbox">
+				
+			
+			</div>	 
+			
+<div class="breadcrumbs"><a href="../ch24.htm">Chapter 24 - Linear Image Processing</a> / Example of a Large PSF: Illumination Flattening</div><h2>Chapter 24: Linear Image Processing</h2><div class="subTitle">Example of a Large PSF: Illumination Flattening</div><p><div style="text-align: justify"><p>A common application requiring a large PSF is the enhancement of images with
+unequal illumination.  Convolution by separability is an ideal algorithm to carry
+out this processing.  With only a few exceptions, the images seen by the eye are
+formed from <i>reflected</i> light.  This means that a viewed image is equal to the
+reflectance of the objects multiplied by the ambient illumination.  Figure 24-8
+shows how this works.  Figure (a) represents the <i>reflectance</i> of a scene being
+viewed, in this case, a series of light and dark bands.   Figure (b) illustrates an
+example illumination signal, the pattern of light falling on (a).  As in the real
+world, the illumination slowly varies over the imaging area.  Figure (c) is the
+image seen by the eye, equal to the reflectance image, (a), multiplied by the
+illumination image, (b).  The regions of poor illumination are difficult to view
+in (c) for two reasons: they are too dark and their contrast is too low (the
+difference between the peaks and the valleys). </p>
+
+<p>To understand how this relates to the problem of every day vision, imagine you
+are looking at two identically dressed men.  One of them is standing in the
+bright sunlight, while the other is standing in the shade of a nearby tree.  The
+percent of the incident light reflected from both men is the same.  For instance,
+their faces might reflect 80% of the incident light, their gray shirts 40% and
+their dark pants 5%.  The problem is, the illumination of the two might be, say,
+ten times different.  This makes the image of the man in the shade ten times
+darker than the person in the sunlight, and the contrast (between the face, shirt,
+and pants) ten times less. </p>
+
+<p>The goal of the image processing is to <i>flatten</i> the illumination component in the
+acquired image.  In other words, we want the final image to be representative
+of the objects' reflectance, not the lighting conditions.  In terms of Fig. 24-8,
+given (c), find (a). This is a nonlinear filtering problem, since the component
+images were combined by multiplication, not addition.  While this separation
+cannot be performed perfectly, the improvement can be dramatic. </p>
+
+<p>To start, we will convolve image (c) with a large PSF, one-fifth the size of the
+entire image. The goal is to eliminate the sharp features in (c), resulting</p>
+
+<div style="text-align: center; margin: 20px;"><img src="../graphics/F_24_8.gif" border="0" alt=""></img></div>
+
+<p>in an approximation to the original illumination signal, (b).  This is where
+convolution by separability is used.  The exact shape of the PSF is not
+important, only that it is much wider than the features in the reflectance image. 
+Figure (d) is the result, using a Gaussian filter kernel. </p>
+
+<p>Since a smoothing filter provides an estimate of the illumination image, we will
+use an edge enhancement filter to find the reflectance image.  That is, image (c)
+will be convolved with a filter kernel consisting of a delta function minus a
+Gaussian.  To reduce execution time, this is done by subtracting the smoothed
+image in (d) from the original image in (c).  Figure (e) shows the result.  It
+doesn't work!  While the dark areas have been properly lightened, the contrast
+in these areas is still terrible. </p>
+
+<p>Linear filtering performs poorly in this application because the reflectance and
+illumination signals were original combined by multiplication, not addition. 
+Linear filtering cannot correctly separate signals combined by a nonlinear
+operation.  To separate these signals, they must be <i>unmultiplied</i>. In other words,
+the original image should be <i>divided</i> by the smoothed image, as is shown in (f). 
+This corrects the brightness and restores the contrast to the proper level.</p>
+
+<p>This procedure of dividing the images is closely related to <span style="font-weight: bold">homomorphic
+processing</span>, previously described in Chapter 22.  Homomorphic processing is
+a way of handling signals combined through a nonlinear operation.  The strategy
+is to change the nonlinear problem into a linear one, through an appropriate
+mathematical operation.  When two signals are combined by </p>
+
+
+<div style="text-align: center; margin: 20px;"><img src="../graphics/F_24_8b.gif" border="0" alt=""></img></div>
+
+<p>multiplication, homomorphic processing starts by taking the <i>logarithm</i> of the
+acquired signal.  With the identity: log(<i>a</i>&times;<i>b</i>) = log(<i>a</i>) + log(<i>b</i>), the problem of
+separating <i>multiplied</i> signals is converted into the problem of separating <i>added</i>
+signals.  For example, after taking the logarithm of the image in (c), a linear
+high-pass filter can be used to isolate the logarithm of the reflectance image. 
+As before, the quickest way to carry out the high-pass filter is to subtract a
+smoothed version of the image.  The antilogarithm (exponent) is then used to
+undo the logarithm, resulting in the desired approximation to the reflectance
+image.</p>
+
+<p>Which is better, dividing or going along the homomorphic path?  They are
+nearly the same, since taking the logarithm and subtracting is <i>equal</i> to dividing. 
+The only difference is the approximation used for the illumination image.   One
+method uses a smoothed version of the acquired image, while the other uses a
+smoothed version of the logarithm of the acquired image.  </p>
+<p>This technique of flattening the illumination signal is so useful it has been
+incorporated into the neural structure of the eye.  The processing in the middle
+layer of the retina was previously described as an edge enhancement or high-pass filter.  While this is true, it doesn't tell the whole story.  The first layer of
+the eye is nonlinear, approximately taking the <i>logarithm</i> of the incoming image. 
+This makes the eye a homomorphic processor.  Just as described above, the
+logarithm followed by a linear edge enhancement filter flattens the illumination
+component, allowing the eye to see under poor lighting conditions.   Another
+interesting use of homomorphic processing occurs in photography.  The density
+(darkness) of a negative is equal to the logarithm of the brightness in the final
+photograph. This means that any manipulation of the negative during the
+development stage is a type of homomorphic processing. </p>
+
+<p>Before leaving this example, there is a nuisance that needs to be mentioned. </p>
+<p>As discussed in Chapter 6, when an <i>N</i> point signal is convolved with an <i>M</i> point
+filter kernel, the resulting signal is <i>N</i>+<i>M</i>-1 points long.  Likewise, when an
+<i>M</i>&times<i>M</i> image is convolved with an <i>N</i>&times<i>N</i> filter kernel, the result is an (<i>M</i>+<i>N</i>-1) &times; (<i>M</i>+<i>N</i>-1) image.  The problem is, it is often difficult to manage a
+changing image size.  For instance, the allocated memory must change, the
+video display must be adjusted, the array indexing may need altering, etc.  The
+common way around this is to <i>ignore</i> it; if we start with a 512&times;512 image, we
+want to end up with a 512&times;512 image.  The pixels that do not fit within the
+original boundaries are discarded.  </p>
+
+<p>While this keeps the image size the same, it doesn't solve the whole problem;
+these is still the <i>boundary condition</i> for convolution.  For example, imagine
+trying to calculate the pixel at the upper-right corner of (d).  This is done by
+centering the Gaussian PSF on the upper-right corner of (c).  Each pixel in (c)
+is then multiplied by the corresponding pixel in the overlaying PSF, and the
+products are added.  The problem is, three-quarters of the PSF lies outside the
+defined image.  The easiest approach is to assign the undefined pixels a value
+of zero.  This is how (d) was created, accounting for the dark band around the
+perimeter of the image.  That is, the brightness smoothly decreases to the pixel
+value of zero, exterior to the defined image. </p>
+
+<p>Fortunately, this dark region around the boarder can be corrected (although it
+hasn't been in this example).  This is done by dividing each pixel in (d) by a
+correction factor.  The correction factor is the fraction of the PSF that was
+immersed in the input image when the pixel was calculated.  That is, to correct
+an individual pixel in (d), imagine that the PSF is centered on the corresponding
+pixel in (c).  For example, the upper-right pixel in (c) results from only 25% of
+the PSF overlapping the input image.  Therefore, correct this pixel in (d) by
+dividing it by a factor of 0.25.  This means that the pixels in the center of (d)
+will not be changed, but the dark pixels around the perimeter will be brightened.
+To find the correction factors, imagine convolving the filter kernel with an
+image having all the pixel values equal to <i>one</i>.  The pixels in the resulting image
+are the correction factors needed to eliminate the edge effect.</p></div></p>Next Section: <a href="5.htm">Fourier Image Analysis</a>			
+
+		</div>
+		<div class="clear"><!-- --></div>
+		
+
+	</div>
+</div>
+
+<!-- Footer -->
+
+<div id="footer">
+	<a href="../index.html">Home</a> | <a href="../pdfbook.htm">The Book by Chapters</a> | <a href="../about.htm">About the Book</a> | <a href="../swsmith.htm">Steven W. Smith</a> | <a href="http://www.dsprelated.com/blogs-1/nf/Steve_Smith.php">Blog</a> | <a href="../contact.htm">Contact</a>
+	<br />
+	Copyright © 1997-2011 by California Technical Publishing
+</div>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-1774944-11");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+</body>
+</html>

@@ -1,0 +1,373 @@
+	 
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Spatial Resolution</title>
+<link href="../new/css/default.css" rel="stylesheet" type="text/css" />
+
+<script type='text/javascript' src='../new/js/jquery-1.5.js'></script>
+<script type='text/javascript' src='../new/js/jquery.droppy.js'></script>
+<link rel="stylesheet" href="../new/css/droppy.css" type="text/css" />
+<script type='text/javascript' src='../new/js/jcc.js'></script>
+<script>
+$(function(){
+	if($.browser.msie){
+        if($.browser.version.substr(0,1)!="9"){
+            $('#greenBox2').corner({tl:{radius:5}, tr:{radius:5}, bl:{radius:5}, br:{radius:5}, antiAlias:true });
+        }
+    }else{
+        $('#greenBox2').corner({tl:{radius:5}, tr:{radius:5}, bl:{radius:3}, br:{radius:5}, antiAlias:true });
+    }
+});
+</script>
+
+<link rel="stylesheet" href="../new/css/jquery.treeview.css" />
+<script src="../new/js/jquery.cookie.js" type="text/javascript"></script>
+<script src="../new/js/jquery.treeview.js" type="text/javascript"></script>
+<script type="text/javascript" src="../new/js/demo.js"></script>
+
+</head>
+
+<body>
+
+
+<div id="divPage">
+	<div id="wrapper" class="not-logged-in">
+		
+		<!-- Header -->
+		
+<div id="header">
+			<h1>The Scientist and Engineer's Guide to<br />Digital Signal Processing<br /><span class="txtBlue txt26">By Steven W. Smith, Ph.D.</span></h1>
+			<div id="menu">
+				<ul id='nav' style="margin-left:10px;"><li><a href="../index.html">Home</a></li><li><a href="../pdfbook.htm" class="selected">The Book by Chapters</a></li><li class="drop"><a href="../about.htm">About the Book</a>					
+					<ul>						
+						<li><a href="../copyrite.htm">Copyright and permissible use</a></li>							
+						<li><a href="../whatdsp.htm">What is DSP?</a></li>
+						<li><a href="../eightres.htm">8 good reasons for learning DSP</a></li>
+						<li><a href="../reviews.htm">Comments by reviewers</a></li>
+						<li><a href="../errata.htm">Errata</a></li>			
+						<li><a href="http://www.dspguide.com/ch25/download.htm">Free Software and Teaching Aids</a></li>						
+						<li><a href="../editions.htm">Differences Between Editions</a></li>
+					</ul>
+				  </li><li><a href="../swsmith.htm">Steven W. Smith</a></li><li><a href="http://www.dsprelated.com/blogs-1/nf/Steve_Smith.php">Blog</a></li><li><a href="../contact.htm">Contact</a></li>					
+				</ul>
+				<script type="text/javascript">$(function() {$("#nav").droppy();});</script>
+			</div>
+		</div>
+
+		
+		<!-- Content -->
+		
+		<!-- -->		
+		<div id="columnLeft">			
+			
+			<div class="box">
+				<h2>Book Search</h2>
+				<div id="search">
+					<form action="http://www.dspguide.com/search.php" method="post">
+						<input type="text" name="searchfor" class="txtField" />
+						<input type="image" src="../new/images/btn-go.png" name="Submit" value="Submit" class="button" />
+						<div class="clear"><!-- --></div>
+					</form>
+				</div>
+			</div>
+		
+			
+			<div class="box">
+				<h2>Download this chapter in PDF format</h2>
+				<b><a href="../CH25.PDF">Chapter25.pdf</a></b>
+				<br />
+				<img src="../new/images/adobe-reader.png" alt="" vspace="5" />
+			</div>
+
+			<div class="box">
+				<h2>Table of contents</h2>
+				<ul id="red" class="treeview-red">	 
+					<ul style="border-top:1px solid #aeaeeb;"><li style="border-top:1px solid #aeaeeb;"><a href="../ch1.htm">1: The Breadth and Depth of DSP</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch1/1.htm" style="color:#b4b4e9;">The Roots of DSP</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch1/2.htm">Telecommunications</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch1/3.htm">Audio Processing</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch1/4.htm">Echo Location</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch1/5.htm">Image Processing</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch2.htm">2: Statistics, Probability and Noise</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch2/1.htm" style="color:#b4b4e9;">Signal and Graph Terminology</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch2/2.htm">Mean and Standard Deviation</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch2/3.htm">Signal vs. Underlying Process</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch2/4.htm">The Histogram, Pmf and Pdf</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch2/5.htm">The Normal Distribution</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch2/6.htm">Digital Noise Generation</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch2/7.htm">Precision and Accuracy</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch3.htm">3: ADC and DAC</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch3/1.htm" style="color:#b4b4e9;">Quantization</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch3/2.htm">The Sampling Theorem</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch3/3.htm">Digital-to-Analog Conversion</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch3/4.htm">Analog Filters for Data Conversion</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch3/5.htm">Selecting The Antialias Filter</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch3/6.htm">Multirate Data Conversion</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch3/7.htm">Single Bit Data Conversion</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch4.htm">4: DSP Software</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch4/1.htm" style="color:#b4b4e9;">Computer Numbers</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch4/2.htm">Fixed Point (Integers)</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch4/3.htm">Floating Point (Real Numbers)</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch4/4.htm">Number Precision</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch4/5.htm">Execution Speed: Program Language</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch4/6.htm">Execution Speed: Hardware</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch4/7.htm">Execution Speed: Programming Tips</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch5.htm">5: Linear Systems</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch5/1.htm" style="color:#b4b4e9;">Signals and Systems</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch5/2.htm">Requirements for Linearity</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch5/3.htm">Static Linearity and Sinusoidal Fidelity</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch5/4.htm">Examples of Linear and Nonlinear Systems</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch5/5.htm">Special Properties of Linearity</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch5/6.htm">Superposition: the Foundation of DSP</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch5/7.htm">Common Decompositions</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch5/8.htm">Alternatives to Linearity</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch6.htm">6: Convolution</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch6/1.htm" style="color:#b4b4e9;">The Delta Function and Impulse Response</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch6/2.htm">Convolution</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch6/3.htm">The Input Side Algorithm</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch6/4.htm">The Output Side Algorithm</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch6/5.htm">The Sum of Weighted Inputs</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch7.htm">7: Properties of Convolution</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch7/1.htm" style="color:#b4b4e9;">Common Impulse Responses</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch7/2.htm">Mathematical Properties</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch7/3.htm">Correlation</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch7/4.htm">Speed</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch8.htm">8: The Discrete Fourier Transform</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch8/1.htm" style="color:#b4b4e9;">The Family of Fourier Transform</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch8/2.htm">Notation and Format of the Real DFT</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch8/3.htm">The Frequency Domain's Independent Variable</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch8/4.htm">DFT Basis Functions</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch8/5.htm">Synthesis, Calculating the Inverse DFT</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch8/6.htm">Analysis, Calculating the DFT</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch8/7.htm">Duality</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch8/8.htm">Polar Notation</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch8/9.htm">Polar Nuisances</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch9.htm">9: Applications of the DFT</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch9/1.htm" style="color:#b4b4e9;">Spectral Analysis of Signals</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch9/2.htm">Frequency Response of Systems</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch9/3.htm">Convolution via the Frequency Domain</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch10.htm">10: Fourier Transform Properties</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch10/1.htm" style="color:#b4b4e9;">Linearity of the Fourier Transform</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch10/2.htm">Characteristics of the Phase</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch10/3.htm">Periodic Nature of the DFT</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch10/4.htm">Compression and Expansion, Multirate methods</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch10/5.htm">Multiplying Signals (Amplitude Modulation)</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch10/6.htm">The Discrete Time Fourier Transform</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch10/7.htm">Parseval's Relation</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch11.htm">11: Fourier Transform Pairs</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch11/1.htm" style="color:#b4b4e9;">Delta Function Pairs</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch11/2.htm">The Sinc Function</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch11/3.htm">Other Transform Pairs</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch11/4.htm">Gibbs Effect</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch11/5.htm">Harmonics</a></li><li style="border-top:1px solid #aeaeeb;"><a href="http://www.dspguide.com/ch11/6.htm">Chirp Signals</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch12.htm">12: The Fast Fourier Transform</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch12/1.htm" style="color:#b4b4e9;">Real DFT Using the Complex DFT</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch12/2.htm">How the FFT works</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch12/3.htm">FFT Programs</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch12/4.htm">Speed and Precision Comparisons</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch12/5.htm">Further Speed Increases</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch13.htm">13: Continuous Signal Processing</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch13/1.htm" style="color:#b4b4e9;">The Delta Function</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch13/2.htm">Convolution</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch13/3.htm">The Fourier Transform</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch13/4.htm">The Fourier Series</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch14.htm">14: Introduction to Digital Filters</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch14/1.htm" style="color:#b4b4e9;">Filter Basics</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch14/2.htm">How Information is Represented in Signals</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch14/3.htm">Time Domain Parameters</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch14/4.htm">Frequency Domain Parameters</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch14/5.htm">High-Pass, Band-Pass and Band-Reject Filters</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch14/6.htm">Filter Classification</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch15.htm">15: Moving Average Filters</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch15/1.htm" style="color:#b4b4e9;">Implementation by Convolution</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch15/2.htm">Noise Reduction vs. Step Response</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch15/3.htm">Frequency Response</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch15/4.htm">Relatives of the Moving Average Filter</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch15/5.htm">Recursive Implementation</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch16.htm">16: Windowed-Sinc Filters</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch16/1.htm" style="color:#b4b4e9;">Strategy of the Windowed-Sinc</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch16/2.htm">Designing the Filter</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch16/3.htm">Examples of Windowed-Sinc Filters</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch16/4.htm">Pushing it to the Limit</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch17.htm">17: Custom Filters</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch17/1.htm" style="color:#b4b4e9;">Arbitrary Frequency Response</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch17/2.htm">Deconvolution</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch17/3.htm">Optimal Filters</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch18.htm">18: FFT Convolution</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch18/1.htm" style="color:#b4b4e9;">The Overlap-Add Method</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch18/2.htm">FFT Convolution</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch18/3.htm">Speed Improvements</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch19.htm">19: Recursive Filters</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch19/1.htm" style="color:#b4b4e9;">The Recursive Method</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch19/2.htm">Single Pole Recursive Filters</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch19/3.htm">Narrow-band Filters</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch19/4.htm">Phase Response</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch19/5.htm">Using Integers</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch20.htm">20: Chebyshev Filters</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch20/1.htm" style="color:#b4b4e9;">The Chebyshev and Butterworth Responses</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch20/2.htm">Designing the Filter</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch20/3.htm">Step Response Overshoot</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch20/4.htm">Stability</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch21.htm">21: Filter Comparison</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch21/1.htm" style="color:#b4b4e9;">Match #1: Analog vs. Digital Filters</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch21/2.htm">Match #2: Windowed-Sinc vs. Chebyshev</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch21/3.htm">Match #3: Moving Average vs. Single Pole</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch22.htm">22: Audio Processing</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch22/1.htm" style="color:#b4b4e9;">Human Hearing</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch22/2.htm">Timbre</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch22/3.htm">Sound Quality vs. Data Rate</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch22/4.htm">High Fidelity Audio</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch22/5.htm">Companding</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch22/6.htm">Speech Synthesis and Recognition</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch22/7.htm">Nonlinear Audio Processing</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch23.htm">23: Image Formation & Display</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch23/1.htm" style="color:#b4b4e9;">Digital Image Structure</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch23/2.htm">Cameras and Eyes</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch23/3.htm">Television Video Signals</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch23/4.htm">Other Image Acquisition and Display</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch23/5.htm">Brightness and Contrast Adjustments</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch23/6.htm">Grayscale Transforms</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch23/7.htm">Warping</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch24.htm">24: Linear Image Processing</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch24/1.htm" style="color:#b4b4e9;">Convolution</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch24/2.htm">3x3 Edge Modification</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch24/3.htm">Convolution by Separability</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch24/4.htm">Example of a Large PSF: Illumination Flattening</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch24/5.htm">Fourier Image Analysis</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch24/6.htm">FFT Convolution</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch24/7.htm">A Closer Look at Image Convolution</a></li></ul></li><li class="open" style="border-top:1px solid #aeaeeb;"><a href="../ch25.htm" style="color:#b4b4e9;">25: Special Imaging Techniques</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="1.htm" style="color:#b4b4e9;">Spatial Resolution</a></li><li style="border-top:1px solid #aeaeeb;"><a href="2.htm">Sample Spacing and Sampling Aperture</a></li><li style="border-top:1px solid #aeaeeb;"><a href="3.htm">Signal-to-Noise Ratio</a></li><li style="border-top:1px solid #aeaeeb;"><a href="4.htm">Morphological Image Processing</a></li><li style="border-top:1px solid #aeaeeb;"><a href="5.htm">Computed Tomography</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch26.htm">26: Neural Networks (and more!)</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch26/1.htm" style="color:#b4b4e9;">Target Detection</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch26/2.htm">Neural Network Architecture</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch26/3.htm">Why Does it Work?</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch26/4.htm">Training the Neural Network</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch26/5.htm">Evaluating the Results</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch26/6.htm">Recursive Filter Design</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch27.htm">27: Data Compression</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch27/1.htm" style="color:#b4b4e9;">Data Compression Strategies</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch27/2.htm">Run-Length Encoding</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch27/3.htm">Huffman Encoding</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch27/4.htm">Delta Encoding</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch27/5.htm">LZW Compression</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch27/6.htm">JPEG (Transform Compression)</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch27/7.htm">MPEG</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch28.htm">28: Digital Signal Processors</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch28/1.htm" style="color:#b4b4e9;">How DSPs are Different from Other Microprocessors</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch28/2.htm">Circular Buffering</a></li><li style="border-top:1px solid #aeaeeb;"><a href="http://www.dspguide.com/ch28/3.htm">Architecture of the Digital Signal Processor</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch28/4.htm">Fixed versus Floating Point</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch28/5.htm">C versus Assembly</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch28/6.htm">How Fast are DSPs?</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch28/7.htm">The Digital Signal Processor Market</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch29.htm">29: Getting Started with DSPs</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="http://www.dspguide.com/ch29/1.htm" style="color:#b4b4e9;">The ADSP-2106x family</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch29/2.htm">The SHARC EZ-KIT Lite</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch29/3.htm">Design Example: An FIR Audio Filter</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch29/4.htm">Analog Measurements on a DSP System</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch29/5.htm">Another Look at Fixed versus Floating Point</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch29/6.htm">Advanced Software Tools</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch30.htm">30: Complex Numbers</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch30/1.htm" style="color:#b4b4e9;">The Complex Number System</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch30/2.htm">Polar Notation</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch30/3.htm">Using Complex Numbers by Substitution</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch30/4.htm">Complex Representation of Sinusoids</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch30/5.htm">Complex Representation of Systems</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch30/6.htm">Electrical Circuit Analysis</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch31.htm">31: The Complex Fourier Transform</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch31/1.htm" style="color:#b4b4e9;">The Real DFT</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch31/2.htm">Mathematical Equivalence</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch31/3.htm">The Complex DFT</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch31/4.htm">The Family of Fourier Transforms</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch31/5.htm">Why the Complex Fourier Transform is Used</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch32.htm">32: The Laplace Transform</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch32/1.htm" style="color:#b4b4e9;">The Nature of the s-Domain</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch32/2.htm">Strategy of the Laplace Transform</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch32/3.htm">Analysis of Electric Circuits</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch32/4.htm">The Importance of Poles and Zeros</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch32/5.htm">Filter Design in the s-Domain</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch33.htm">33: The z-Transform</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch33/1.htm" style="color:#b4b4e9;">The Nature of the z-Domain</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch33/2.htm">Analysis of Recursive Systems</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch33/3.htm">Cascade and Parallel Stages</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch33/4.htm">Spectral Inversion</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch33/5.htm">Gain Changes</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch33/6.htm">Chebyshev-Butterworth Filter Design</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch33/7.htm">The Best and Worst of DSP</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch34.htm">34: Explaining Benford's Law</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="../ch34/1.htm" style="color:#b4b4e9;">Frank Benford's Discovery</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch34/2.htm">Homomorphic Processing</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch34/3.htm">The Ones Scaling Test</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch34/4.htm">Writing Benford's Law as a Convolution</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch34/5.htm">Solving in the Frequency Domain</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch34/6.htm">Solving Mystery #1</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch34/7.htm">Solving Mystery #2</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch34/8.htm">More on Following Benford's law</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch34/9.htm">Analysis of the Log-Normal Distribution</a></li><li style="border-top:1px solid #aeaeeb;"><a href="../ch34/10.htm">The Power of Signal Processing</a></li></ul></li>
+					</ul>
+				</ul>			
+			</div>
+
+			<div class="box">
+				<h2>How to order your own hardcover copy</h2>
+				Wouldn't you rather have a bound book instead of 640 loose pages?<br />
+				Your laser printer will thank you!<br />
+				<b>Order from <a href="http://www.amazon.com/Scientist-Engineers-Digital-Signal-Processing/dp/0966017633/ref=pd_bxgy_b_img_a">Amazon.com</a>.</b>
+			</div>
+
+		
+			
+		</div>	
+
+		<!-- -->		
+		<div id="columnRight">	
+		
+			<div id="adbox">
+				
+			
+			</div>	 
+			
+<div class="breadcrumbs"><a href="../ch25.htm">Chapter 25 - Special Imaging Techniques</a> / Spatial Resolution</div><h2>Chapter 25: Special Imaging Techniques</h2><div class="subTitle">Spatial Resolution</div><p><div style="text-align: justify"><p>Suppose we want to compare two imaging systems, with the goal of determining
+which has the best spatial resolution.  In other words, we want to know which
+system can detect the smallest object.   To simplify things, we would like the
+answer to be a <i>single number</i> for each system.  This allows a direct comparison
+upon which to base design decisions.  Unfortunately, a single parameter is not
+always sufficient to characterize all the subtle aspects of imaging.  This is
+complicated by the fact that spatial resolution is limited by two distinct but
+interrelated effects: <i>sample spacing</i> and <i>sampling aperture size</i>.  This section
+contains two main topics: (1) how a single parameter can best be used to
+characterize spatial resolution, and (2) the relationship between sample spacing
+and sampling aperture size.  </p>
+
+<p>Figure 25-1a shows profiles from three circularly symmetric PSFs: the pillbox,
+the Gaussian, and the exponential.  These are representative of the PSFs
+commonly found in imaging systems.  As described in the last chapter,  the
+pillbox can result from an improperly focused lens system.  Likewise, the
+Gaussian is formed when random errors are combined, such as viewing stars
+through a turbulent atmosphere.  An exponential PSF is generated when
+electrons or x-rays strike a phosphor layer and are converted into </p>
+
+<div style="text-align: center; margin: 20px;"><img src="../graphics/F_25_1.gif" border="0" alt=""></img></div>
+
+<p>light.  This is used in radiation detectors, night vision light amplifiers, and CRT
+displays.   The exact shape of these three PSFs is not important for this
+discussion, only that they broadly represent the PSFs seen in real world
+applications. </p>
+
+<p>The PSF contains complete information about the spatial resolution.  To express
+the spatial resolution by a single number, we can ignore the <i>shape</i> of the PSF
+and simply measure its <i>width</i>.  The most common way to specify this is by the
+Full-Width-at-Half-Maximum (FWHM) value.  For example, all the PSFs in (a)
+have an FWHM of 1 unit.  </p>
+
+<p>Unfortunately, this method has two significant drawbacks.  First, it does not
+match other measures of spatial resolution, including the subjective judgement
+of observers viewing the images.  Second, it is usually very difficult to directly 
+measure the PSF.  Imagine feeding an impulse into an imaging system; that is,
+taking an image of a very small white dot on a black background.  By definition,
+the acquired image will be the PSF of the system.  The problem is, the measured
+PSF will only contain a few pixels, and its contrast will be low.  Unless you are
+very careful, random noise will swamp the measurement.  For instance, imagine
+that the impulse image is a 512&times;512 array of all zeros except for a single pixel
+having a value of 255.  Now compare this to a normal image where all of the
+512&times;512 pixels have an average value of about 128.  In loose terms, the signal
+in the impulse image is about 100,000 times weaker than a normal image.  No
+wonder the signal-to-noise ratio will be bad; there's hardly any signal!  </p>
+
+<p>A basic theme throughout this book is that signals should be understood in the
+domain where the information is encoded.   For instance, audio signals should
+be dealt with in the frequency domain, while image signals should be handled
+in the spatial domain.  In spite of this, one way to measure image resolution is
+by looking at the <i>frequency response</i>.  This goes against the fundamental
+philosophy of this book; however, it is a common method and you need to
+become familiar with it.  </p>
+
+<p>Taking the two-dimensional Fourier transform of the PSF provides the two-dimensional frequency response.  If the PSF is circularly symmetric, its
+frequency response will also be circularly symmetric.  In this case, complete
+information about the frequency response is contained in its profile.  That is,
+after calculating the frequency domain via the FFT method, columns 0 to <i>N</i>/2
+in row 0 are all that is needed.  In imaging jargon, this display of the frequency
+response is called the <span style="font-weight: bold">Modulation Transfer Function (MTF)</span>.  Figure 25-1b
+shows the MTFs for the three PSFs in (a).  In cases where the PSF is not
+circularly symmetric, the entire two-dimensional frequency response contains
+information.  However, it is usually sufficient to know the  MTF curves in the
+vertical and horizontal directions (i.e., columns 0 to <i>N</i>/2 in row 0, and rows 0
+to <i>N</i>/2 in column 0).  Take note: this procedure of extracting a row or column
+from the two-dimensional frequency spectrum is <i>not</i> equivalent to taking the
+one-dimensional FFT of the profiles shown in (a).  We will come back to this
+issue shortly.  As shown in Fig. 25-1, similar values of FWHM do not
+correspond to similar MTF curves.</p>
+
+<p>Figure 25-2 shows a <span style="font-weight: bold">line pair gauge</span>, a device used to measure image resolution
+via the MTF.   Line pair gauges come in different forms depending on the
+particular application.  For example, the black and white pattern shown in this
+figure could be directly used to test video cameras.  For an x-ray imaging
+system, the ribs might be made from lead, with an x-ray transparent material
+between.  The key feature is that the black and white lines have a closer spacing
+toward one end.  When an image is taken of a line pair gauge, the lines at the
+closely spaced end will be blurred together, while at the other end they will be
+distinct.  Somewhere in the middle the lines will be just barely separable.  An
+observer looks at the image, identifies this location, and reads the corresponding
+resolution on the calibrated scale.  </p>
+
+<div style="text-align: center; margin: 20px;"><img src="../graphics/F_25_2.gif" border="0" alt=""></img></div>
+
+<p>The <i>way</i> that the ribs blur together is important in understanding the limitations
+of this measurement.  Imagine acquiring an image of the line pair gauge in Fig.
+25-2.  Figures (a) and (b) show examples of the profiles  at low and high spatial
+frequencies.  At the low frequency, shown in (b),  the curve is flat on the top and
+bottom, but the edges are blurred,    At the higher spatial frequency, (a), the
+<i>amplitude</i> of the modulation has been reduced.  This is exactly what the MTF
+curve in Fig. 25-1b describes: higher spatial frequencies are reduced in
+amplitude.  The individual ribs will be distinguishable in the image as long as
+the amplitude is greater than about 3% to 10% of the original height.  This is
+related to the eye's ability to distinguish the low contrast difference between the
+peaks and valleys in the presence of image noise.</p>
+
+<p>A strong advantage of the line pair gauge measurement is that it is simple and
+fast.  The strongest disadvantage is that it relies on the human eye, and therefore
+has a certain subjective component.  Even if the entire MTF curve is measured,
+the most common way to express the system resolution is to quote the frequency
+where the MTF is reduced to either 3%, 5% or 10%.  Unfortunately, you will
+not always be told which of these values is being used; product data sheets
+frequently use vague terms such as "limiting resolution."  Since manufacturers
+like their specifications to be as good as possible (regardless of what the device
+actually does), be safe and interpret these ambiguous terms to mean 3% on the
+MTF curve. </p>
+
+<p>A subtle point to notice is that the MTF is defined in terms of <i>sine</i> waves, while
+the line pair gauge uses <i>square</i> waves.  That is, the ribs are uniformly dark
+regions separated by uniformly light regions.  This is done for manufacturing
+convenience; it is very difficult to make lines that have a sinusoidally varying
+darkness.  What are the consequences of using a square wave to measure the
+MTF? At high spatial frequencies, all frequency components but the
+fundamental of the square wave have been removed.  This causes the
+modulation to appear sinusoidal, such as is shown in Fig. 25-2a.  At low
+frequencies, such as shown in Fig. 25-2b, the wave appears square.  The
+fundamental sine wave contained in a square wave has an amplitude of 4/&pi; = 1.27 times the amplitude of the square wave (see Table 13-10).  The
+result: the line pair gauge provides a slight overestimate of the true resolution
+of the system, by starting with an effective amplitude of more than pure black
+to pure white.  Interesting, but almost always ignored.</p>
+
+<p>Since square waves and sine waves are used interchangeably to measure the
+MTF, a special terminology has arisen.  Instead of the word "cycle," those in
+imaging use the term <span style="font-weight: bold">line pair</span> (a dark line next to a light line).  For example,
+a spatial frequency would be referred to as <i>25 line pairs per millimeter</i>, instead
+of <i>25 cycles per millimeter</i>. </p>
+
+<p>The width of the PSF doesn't track well with human perception and is difficult
+to measure.  The MTF methods are in the <i>wrong domain</i> for understanding how
+resolution affects the encoded information.  Is there a more favorable
+alternative?  The answer is yes, the <span style="font-weight: bold">line spread function (LSF)</span> and the <span style="font-weight: bold">edge
+response</span>.  As shown in Fig. 25-3, the line spread</p>
+
+
+<div style="text-align: center; margin: 20px;"><img src="../graphics/F_25_3.gif" border="0" alt=""></img></div>
+
+<p>function is the response of the system to a thin line across the image.  Similarly,
+the edge response is how the system responds to a sharp  straight discontinuity
+(an edge).  Since a line is the derivative (or first difference) of an edge, the LSF
+is the derivative (or first difference) of the edge response. The single parameter
+measurement used here is the distance required for the edge response to rise
+from 10% to 90%.  </p>
+
+<p>There are many advantages to using the edge response for measuring resolution. 
+First, the measurement is in the same form as the image information is encoded. 
+In fact, the main reason for wanting to know the resolution of a system is to
+understand how the edges in an image are <i>blurred</i>.  The second advantage is that
+the edge response is simple to measure because  edges are easy to generate in
+images.  If needed, the LSF can easily be found by taking the first difference of
+the edge response.</p>
+
+<p>The third advantage is that all common edges responses have a similar shape,
+even though they may originate from drastically different PSFs.  This is shown
+in Fig. 25-4a, where the edge responses of the pillbox, Gaussian, and
+exponential PSFs are displayed.  Since the shapes are similar, the 10%-90%
+distance is an excellent single parameter measure of resolution.  The fourth
+advantage is that the MTF can be directly found by taking the one-dimensional
+FFT of the LSF (unlike the PSF to MTF calculation that must use a two-dimensional Fourier transform).  Figure 25-4b shows the MTFs corresponding
+to the edge responses of (a).  In other words, the curves in (a) are converted into
+the curves in (b) by taking the first difference (to find the LSF), and then taking
+the FFT.</p>
+
+
+<div style="text-align: center; margin: 20px;"><img src="../graphics/F_25_4.gif" border="0" alt=""></img></div>
+
+<p>The fifth advantage is that similar edge responses have similar MTF curves, as
+shown in Figs. 25-4 (a) and (b).  This allows us to easily convert between the
+two measurements.  In particular, a system that has a 10%-90% edge response
+of <i>x</i> distance, has a limiting resolution (10% contrast) of about 1 line pair per
+<i>x</i> distance.  The units of the "distance" will depend on the type of system being
+dealt with.  For example, consider three different imaging systems that have
+10%-90% edge responses of  0.05 mm, 0.2 milliradian and 3.3 pixels.  The 10%
+contrast level on the corresponding MTF curves will occur at about: 20 lp/mm,
+5 lp/milliradian and 0.33 lp/pixel, respectively.  </p>
+
+<p>Figure 25-5 illustrates the mathematical relationship between the PSF and the
+LSF.  Figure (a) shows a pillbox PSF, a circular area of value 1, displayed as
+white, surrounded by a region of all zeros, displayed as gray.  A profile of the
+PSF (i.e., the pixel values along a line drawn across the center of the image) will
+be a rectangular pulse.  Figure (b) shows the corresponding LSF.   As shown,
+the LSF is mathematically equal to the <i>integrated profile</i> of the PSF.  This is
+found by sweeping across the image in some direction, as illustrated by the rays
+(arrows).  Each value in the integrated profile is the <i>sum</i> of the pixel values
+along the corresponding ray. </p>
+<p>In this example where the rays are vertical, each point in the integrated profile
+is found by adding all the pixel values in each column.  This corresponds to the
+LSF of a line that is <i>vertical</i> in the image.  The LSF of a line that is <i>horizontal</i>
+in the image is found by summing all of the pixel values in each <i>row</i>.  For
+continuous images these concepts are the same, but the summations are replaced
+by integrals.</p>
+
+<p>As shown in this example, the LSF can be directly calculated from the PSF. 
+However, the PSF cannot always be calculated from the LSF.  This is because
+the PSF contains information about the spatial resolution in <i>all directions</i>, while
+the LSF is limited to only one specific direction.  A system</p>
+
+<div style="text-align: center; margin: 20px;"><img src="../graphics/F_25_5.gif" border="0" alt=""></img></div>
+
+<p>has only one PSF, but an infinite number of LSFs, one for each angle.   For
+example, imagine a system that has an oblong PSF.  This makes the spatial
+resolution different in the vertical and horizontal directions, resulting in the LSF
+being different in these directions.  Measuring the LSF at a single angle does
+not provide enough information to calculate the complete PSF except in the
+special instance where the PSF is circularly symmetric.  Multiple LSF
+measurements at various angles make it possible to calculate a non-circular
+PSF; however, the mathematics is quite involved and usually not worth the
+effort.  In fact, the problem of calculating the PSF from a number of LSF
+measurements is exactly the same problem faced in <i>computed tomography</i>,
+discussed later in this chapter.  </p>
+
+<p>As a practical matter, the LSF and the PSF are not dramatically different for
+most imaging systems, and it is very common to see one used as an
+approximation for the other.  This is even more justifiable considering that there
+are two common cases where they are identical: the rectangular PSF  has a
+rectangular LSF (with the same widths), and the Gaussian PSF has a Gaussian
+LSF (with the same standard deviations).</p>
+
+<p>These concepts can be summarized into two skills: how to <i>evaluate</i> a resolution
+specification presented to you, and how to <i>measure</i> a resolution specification
+of your own.  Suppose you come across an advertisement stating:  "This system
+will resolve 40 line pairs per millimeter."  You should interpret this to mean: 
+"A sinusoid of 40 lp/mm will have its amplitude reduced to 3%-10% of its true
+value, and will be just barely visible in the image."  You should also do the
+mental calculation that 40 lp/mm @ 10% contrast is equal to a 10%-90% edge
+response of 1/(40 lp/mm) = 0.025 mm.  If the MTF specification is for a 3%
+contrast level, the edge response will be about 1.5 to 2 times wider.</p>
+
+<p>When you measure the spatial resolution of an imaging system, the steps are
+carried out in reverse.  Place a sharp edge in the image, and measure the
+resulting edge response.  The 10%-90% distance of this curve is the best single
+parameter measurement of the system's resolution.  To keep your boss and the
+marketing people happy, take the first difference of the edge response to find
+the LSF, and then use the FFT to find the MTF.</p></div></p>Next Section: <a href="2.htm">Sample Spacing and Sampling Aperture</a>			
+
+		</div>
+		<div class="clear"><!-- --></div>
+		
+
+	</div>
+</div>
+
+<!-- Footer -->
+
+<div id="footer">
+	<a href="../index.html">Home</a> | <a href="../pdfbook.htm">The Book by Chapters</a> | <a href="../about.htm">About the Book</a> | <a href="../swsmith.htm">Steven W. Smith</a> | <a href="http://www.dsprelated.com/blogs-1/nf/Steve_Smith.php">Blog</a> | <a href="../contact.htm">Contact</a>
+	<br />
+	Copyright © 1997-2011 by California Technical Publishing
+</div>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-1774944-11");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+</body>
+</html>

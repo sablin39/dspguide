@@ -1,0 +1,597 @@
+	 
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Errata</title>
+<link href="new/css/default.css" rel="stylesheet" type="text/css" />
+
+<script type='text/javascript' src='new/js/jquery-1.5.js'></script>
+<script type='text/javascript' src='new/js/jquery.droppy.js'></script>
+<link rel="stylesheet" href="new/css/droppy.css" type="text/css" />
+<script type='text/javascript' src='new/js/jcc.js'></script>
+<script>
+$(function(){
+	if($.browser.msie){
+        if($.browser.version.substr(0,1)!="9"){
+            $('#greenBox2').corner({tl:{radius:5}, tr:{radius:5}, bl:{radius:5}, br:{radius:5}, antiAlias:true });
+        }
+    }else{
+        $('#greenBox2').corner({tl:{radius:5}, tr:{radius:5}, bl:{radius:3}, br:{radius:5}, antiAlias:true });
+    }
+});
+</script>
+
+<link rel="stylesheet" href="new/css/jquery.treeview.css" />
+<script src="new/js/jquery.cookie.js" type="text/javascript"></script>
+<script src="new/js/jquery.treeview.js" type="text/javascript"></script>
+<script type="text/javascript" src="new/js/demo.js"></script>
+
+</head>
+
+<body>
+
+
+<div id="divPage">
+	<div id="wrapper" class="not-logged-in">
+		
+		<!-- Header -->
+		
+<div id="header">
+			<h1>The Scientist and Engineer's Guide to<br />Digital Signal Processing<br /><span class="txtBlue txt26">By Steven W. Smith, Ph.D.</span></h1>
+			<div id="menu">
+				<ul id='nav' style="margin-left:10px;"><li><a href="index.html">Home</a></li><li><a href="pdfbook.htm">The Book by Chapters</a></li><li class="drop"><a href="about.htm" class="selected">About the Book</a>					
+					<ul>						
+						<li><a href="copyrite.htm">Copyright and permissible use</a></li>							
+						<li><a href="whatdsp.htm">What is DSP?</a></li>
+						<li><a href="eightres.htm">8 good reasons for learning DSP</a></li>
+						<li><a href="reviews.htm">Comments by reviewers</a></li>
+						<li><a href="errata.htm">Errata</a></li>			
+						<li><a href="download.htm">Free Software and Teaching Aids</a></li>						
+						<li><a href="editions.htm">Differences Between Editions</a></li>
+					</ul>
+				  </li><li><a href="swsmith.htm">Steven W. Smith</a></li><li><a href="http://www.dsprelated.com/blogs-1/nf/Steve_Smith.php">Blog</a></li><li><a href="contact.htm">Contact</a></li>					
+				</ul>
+				<script type="text/javascript">$(function() {$("#nav").droppy();});</script>
+			</div>
+		</div>
+
+		
+		<!-- Content -->
+
+		<!-- -->		
+		<div id="columnLeft">			
+			
+			<div class="box">
+				<h2>Book Search</h2>
+				<div id="search">
+					<form action="http://www.dspguide.com/search.php" method="post">
+						<input type="text" name="searchfor" class="txtField" />
+						<input type="image" src="new/images/btn-go.png" name="Submit" value="Submit" class="button" />
+						<div class="clear"><!-- --></div>
+					</form>
+				</div>
+			</div>
+
+			<div class="box">
+				<h2>Table of contents</h2>
+				<ul id="red" class="treeview-red">	 
+					<ul style="border-top:1px solid #aeaeeb;"><li style="border-top:1px solid #aeaeeb;"><a href="ch1.htm">1: The Breadth and Depth of DSP</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="ch1/1.htm">The Roots of DSP</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch1/2.htm">Telecommunications</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch1/3.htm">Audio Processing</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch1/4.htm">Echo Location</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch1/5.htm">Image Processing</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="ch2.htm">2: Statistics, Probability and Noise</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="ch2/1.htm">Signal and Graph Terminology</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch2/2.htm">Mean and Standard Deviation</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch2/3.htm">Signal vs. Underlying Process</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch2/4.htm">The Histogram, Pmf and Pdf</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch2/5.htm">The Normal Distribution</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch2/6.htm">Digital Noise Generation</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch2/7.htm">Precision and Accuracy</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="ch3.htm">3: ADC and DAC</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="ch3/1.htm">Quantization</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch3/2.htm">The Sampling Theorem</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch3/3.htm">Digital-to-Analog Conversion</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch3/4.htm">Analog Filters for Data Conversion</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch3/5.htm">Selecting The Antialias Filter</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch3/6.htm">Multirate Data Conversion</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch3/7.htm">Single Bit Data Conversion</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="ch4.htm">4: DSP Software</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="ch4/1.htm">Computer Numbers</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch4/2.htm">Fixed Point (Integers)</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch4/3.htm">Floating Point (Real Numbers)</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch4/4.htm">Number Precision</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch4/5.htm">Execution Speed: Program Language</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch4/6.htm">Execution Speed: Hardware</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch4/7.htm">Execution Speed: Programming Tips</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="ch5.htm">5: Linear Systems</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="ch5/1.htm">Signals and Systems</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch5/2.htm">Requirements for Linearity</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch5/3.htm">Static Linearity and Sinusoidal Fidelity</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch5/4.htm">Examples of Linear and Nonlinear Systems</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch5/5.htm">Special Properties of Linearity</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch5/6.htm">Superposition: the Foundation of DSP</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch5/7.htm">Common Decompositions</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch5/8.htm">Alternatives to Linearity</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="ch6.htm">6: Convolution</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="ch6/1.htm">The Delta Function and Impulse Response</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch6/2.htm">Convolution</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch6/3.htm">The Input Side Algorithm</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch6/4.htm">The Output Side Algorithm</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch6/5.htm">The Sum of Weighted Inputs</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="ch7.htm">7: Properties of Convolution</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="ch7/1.htm">Common Impulse Responses</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch7/2.htm">Mathematical Properties</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch7/3.htm">Correlation</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch7/4.htm">Speed</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="ch8.htm">8: The Discrete Fourier Transform</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="ch8/1.htm">The Family of Fourier Transform</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch8/2.htm">Notation and Format of the Real DFT</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch8/3.htm">The Frequency Domain's Independent Variable</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch8/4.htm">DFT Basis Functions</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch8/5.htm">Synthesis, Calculating the Inverse DFT</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch8/6.htm">Analysis, Calculating the DFT</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch8/7.htm">Duality</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch8/8.htm">Polar Notation</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch8/9.htm">Polar Nuisances</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="ch9.htm">9: Applications of the DFT</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="ch9/1.htm">Spectral Analysis of Signals</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch9/2.htm">Frequency Response of Systems</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch9/3.htm">Convolution via the Frequency Domain</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="ch10.htm">10: Fourier Transform Properties</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="ch10/1.htm">Linearity of the Fourier Transform</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch10/2.htm">Characteristics of the Phase</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch10/3.htm">Periodic Nature of the DFT</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch10/4.htm">Compression and Expansion, Multirate methods</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch10/5.htm">Multiplying Signals (Amplitude Modulation)</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch10/6.htm">The Discrete Time Fourier Transform</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch10/7.htm">Parseval's Relation</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="ch11.htm">11: Fourier Transform Pairs</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="ch11/1.htm">Delta Function Pairs</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch11/2.htm">The Sinc Function</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch11/3.htm">Other Transform Pairs</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch11/4.htm">Gibbs Effect</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch11/5.htm">Harmonics</a></li><li style="border-top:1px solid #aeaeeb;"><a href="http://www.dspguide.com/ch11/6.htm">Chirp Signals</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="ch12.htm">12: The Fast Fourier Transform</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="ch12/1.htm">Real DFT Using the Complex DFT</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch12/2.htm">How the FFT works</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch12/3.htm">FFT Programs</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch12/4.htm">Speed and Precision Comparisons</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch12/5.htm">Further Speed Increases</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="ch13.htm">13: Continuous Signal Processing</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="ch13/1.htm">The Delta Function</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch13/2.htm">Convolution</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch13/3.htm">The Fourier Transform</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch13/4.htm">The Fourier Series</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="ch14.htm">14: Introduction to Digital Filters</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="ch14/1.htm">Filter Basics</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch14/2.htm">How Information is Represented in Signals</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch14/3.htm">Time Domain Parameters</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch14/4.htm">Frequency Domain Parameters</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch14/5.htm">High-Pass, Band-Pass and Band-Reject Filters</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch14/6.htm">Filter Classification</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="ch15.htm">15: Moving Average Filters</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="ch15/1.htm">Implementation by Convolution</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch15/2.htm">Noise Reduction vs. Step Response</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch15/3.htm">Frequency Response</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch15/4.htm">Relatives of the Moving Average Filter</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch15/5.htm">Recursive Implementation</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="ch16.htm">16: Windowed-Sinc Filters</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="ch16/1.htm">Strategy of the Windowed-Sinc</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch16/2.htm">Designing the Filter</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch16/3.htm">Examples of Windowed-Sinc Filters</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch16/4.htm">Pushing it to the Limit</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="ch17.htm">17: Custom Filters</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="ch17/1.htm">Arbitrary Frequency Response</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch17/2.htm">Deconvolution</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch17/3.htm">Optimal Filters</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="ch18.htm">18: FFT Convolution</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="ch18/1.htm">The Overlap-Add Method</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch18/2.htm">FFT Convolution</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch18/3.htm">Speed Improvements</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="ch19.htm">19: Recursive Filters</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="ch19/1.htm">The Recursive Method</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch19/2.htm">Single Pole Recursive Filters</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch19/3.htm">Narrow-band Filters</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch19/4.htm">Phase Response</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch19/5.htm">Using Integers</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="ch20.htm">20: Chebyshev Filters</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="ch20/1.htm">The Chebyshev and Butterworth Responses</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch20/2.htm">Designing the Filter</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch20/3.htm">Step Response Overshoot</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch20/4.htm">Stability</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="ch21.htm">21: Filter Comparison</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="ch21/1.htm">Match #1: Analog vs. Digital Filters</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch21/2.htm">Match #2: Windowed-Sinc vs. Chebyshev</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch21/3.htm">Match #3: Moving Average vs. Single Pole</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="ch22.htm">22: Audio Processing</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="ch22/1.htm">Human Hearing</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch22/2.htm">Timbre</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch22/3.htm">Sound Quality vs. Data Rate</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch22/4.htm">High Fidelity Audio</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch22/5.htm">Companding</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch22/6.htm">Speech Synthesis and Recognition</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch22/7.htm">Nonlinear Audio Processing</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="ch23.htm">23: Image Formation & Display</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="ch23/1.htm">Digital Image Structure</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch23/2.htm">Cameras and Eyes</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch23/3.htm">Television Video Signals</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch23/4.htm">Other Image Acquisition and Display</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch23/5.htm">Brightness and Contrast Adjustments</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch23/6.htm">Grayscale Transforms</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch23/7.htm">Warping</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="ch24.htm">24: Linear Image Processing</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="ch24/1.htm">Convolution</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch24/2.htm">3x3 Edge Modification</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch24/3.htm">Convolution by Separability</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch24/4.htm">Example of a Large PSF: Illumination Flattening</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch24/5.htm">Fourier Image Analysis</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch24/6.htm">FFT Convolution</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch24/7.htm">A Closer Look at Image Convolution</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="ch25.htm">25: Special Imaging Techniques</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="ch25/1.htm">Spatial Resolution</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch25/2.htm">Sample Spacing and Sampling Aperture</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch25/3.htm">Signal-to-Noise Ratio</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch25/4.htm">Morphological Image Processing</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch25/5.htm">Computed Tomography</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="ch26.htm">26: Neural Networks (and more!)</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="ch26/1.htm">Target Detection</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch26/2.htm">Neural Network Architecture</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch26/3.htm">Why Does it Work?</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch26/4.htm">Training the Neural Network</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch26/5.htm">Evaluating the Results</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch26/6.htm">Recursive Filter Design</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="ch27.htm">27: Data Compression</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="ch27/1.htm">Data Compression Strategies</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch27/2.htm">Run-Length Encoding</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch27/3.htm">Huffman Encoding</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch27/4.htm">Delta Encoding</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch27/5.htm">LZW Compression</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch27/6.htm">JPEG (Transform Compression)</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch27/7.htm">MPEG</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="ch28.htm">28: Digital Signal Processors</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="ch28/1.htm">How DSPs are Different from Other Microprocessors</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch28/2.htm">Circular Buffering</a></li><li style="border-top:1px solid #aeaeeb;"><a href="http://www.dspguide.com/ch28/3.htm">Architecture of the Digital Signal Processor</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch28/4.htm">Fixed versus Floating Point</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch28/5.htm">C versus Assembly</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch28/6.htm">How Fast are DSPs?</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch28/7.htm">The Digital Signal Processor Market</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="ch29.htm">29: Getting Started with DSPs</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="http://www.dspguide.com/ch29/1.htm">The ADSP-2106x family</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch29/2.htm">The SHARC EZ-KIT Lite</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch29/3.htm">Design Example: An FIR Audio Filter</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch29/4.htm">Analog Measurements on a DSP System</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch29/5.htm">Another Look at Fixed versus Floating Point</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch29/6.htm">Advanced Software Tools</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="ch30.htm">30: Complex Numbers</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="ch30/1.htm">The Complex Number System</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch30/2.htm">Polar Notation</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch30/3.htm">Using Complex Numbers by Substitution</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch30/4.htm">Complex Representation of Sinusoids</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch30/5.htm">Complex Representation of Systems</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch30/6.htm">Electrical Circuit Analysis</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="ch31.htm">31: The Complex Fourier Transform</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="ch31/1.htm">The Real DFT</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch31/2.htm">Mathematical Equivalence</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch31/3.htm">The Complex DFT</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch31/4.htm">The Family of Fourier Transforms</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch31/5.htm">Why the Complex Fourier Transform is Used</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="ch32.htm">32: The Laplace Transform</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="ch32/1.htm">The Nature of the s-Domain</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch32/2.htm">Strategy of the Laplace Transform</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch32/3.htm">Analysis of Electric Circuits</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch32/4.htm">The Importance of Poles and Zeros</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch32/5.htm">Filter Design in the s-Domain</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="ch33.htm">33: The z-Transform</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="ch33/1.htm">The Nature of the z-Domain</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch33/2.htm">Analysis of Recursive Systems</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch33/3.htm">Cascade and Parallel Stages</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch33/4.htm">Spectral Inversion</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch33/5.htm">Gain Changes</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch33/6.htm">Chebyshev-Butterworth Filter Design</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch33/7.htm">The Best and Worst of DSP</a></li></ul></li><li style="border-top:1px solid #aeaeeb;"><a href="ch34.htm">34: Explaining Benford's Law</a><ul><li style="border-top:1px solid #aeaeeb;"><a href="ch34/1.htm">Frank Benford's Discovery</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch34/2.htm">Homomorphic Processing</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch34/3.htm">The Ones Scaling Test</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch34/4.htm">Writing Benford's Law as a Convolution</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch34/5.htm">Solving in the Frequency Domain</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch34/6.htm">Solving Mystery #1</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch34/7.htm">Solving Mystery #2</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch34/8.htm">More on Following Benford's law</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch34/9.htm">Analysis of the Log-Normal Distribution</a></li><li style="border-top:1px solid #aeaeeb;"><a href="ch34/10.htm">The Power of Signal Processing</a></li></ul></li>
+					</ul>
+				</ul>			
+			</div>
+
+			<div class="box">
+				<h2>How to order your own hardcover copy</h2>
+				Wouldn't you rather have a bound book instead of 640 loose pages?<br />
+				Your laser printer will thank you!<br />
+				<b>Order from <a href="http://www.amazon.com/Scientist-Engineers-Digital-Signal-Processing/dp/0966017633/ref=pd_bxgy_b_img_a">Amazon.com</a>.</b>
+			</div>
+
+		
+			
+		</div>			
+		
+		<!-- -->		
+		<div id="columnRight">	
+
+			<div id="adbox">
+				
+			
+			</div>	 
+		
+			<h1>Errata</h1>
+			<p>The Scientist and Engineer's Guide to Digital Signal Processing by Steven W. Smith, 11/17/2001</p>
+			
+			<h2>First Edition (hardcover)</h2>
+			<ul class="nomarker"> 
+				<li>page 2, line 1, here --> where</li>
+				<li>page 2, line 3, exploded --> explode</li>
+				<li>page 2, line , vender --> vendor</li>
+				<li>page 5, line 12, particularity --> particularly</li>
+				<li>page 6, line 18, resonate --> resonant</li>
+				<li>page 7, 2nd full paragraph, line 9, known --> know</li>
+				<li>page 7, 3rd line from bottom, at --> as</li>
+				<li>page 9, line 7, criteria --> criterion</li>
+				<li>page 13, Fig. 2-1b, Mean = 3.5 --> Mean = 3.0</li>
+				<li>page 17, Table 2-2, program bug: divide by zero error generated on first loop</li>
+				<li>page 20, Fig. 2-4 caption, line 4, shows --> show</li>
+				<li>page 20, line 1, 8 samples --> 7 samples</li>
+				<li>page 21, Table 2-3, line 340: H[I%] --> H%[I%]</li>
+				<li>page 22, 4th paragraph, 3rd to last line, 0 to 255 --> 0 and 255</li>
+				<li>page 22, 4th paragraph, 2nd to last line, histogram --> pmf</li>
+				<li>page 23, 3rd paragraph, 3th line, 121 - 120 --> (121 - 120)</li>
+				<li>page 23, 3rd paragraph, 5th line, 120.5 - 120.4 --> (120.5 - 120.4)</li>
+				<li>page 25, Table 2-4, program bug: program will not handle a value 10.0</li>
+				<li>page 25, Table 2-4, line 230, .01 --> 100</li>
+				<li>page 26, Fig. 2-7 caption line 6, 21 bins --> 9 bins&nbsp;</li>
+				<li>page 26, line 7, delete "in"</li>
+				<li>page 28, 3rd paragraph, line 10, delete second "will be"</li>
+				<li>page 29, line 5, communication --> communicate</li>
+				<li>page 32, 5th paragraph, line 3, has --> have</li>
+				<li>page 32, 3rd line from bottom, used --> use</li>
+				<li>page 39, 3rd paragraph, line 2, continious --> continuous</li>
+				<li>page 41, caption, line 2, recreated --> recreate</li>
+				<li>page 41, line 7, their --> there</li>
+				<li>page 42, 1st full paragraph, line 10, It --> If</li>
+				<li>page 42, 2nd full paragraph, line 9. 3.5 to 4.0 --> 2.5 to 3.0</li>
+				<li>page 43, line 10, you --> your</li>
+				
+				<li>page 46, 3rd full paragraph, line 9, shown -- shows</li>
+				<li>page 50, line 1, use --> used</li>
+				<li>page 54, 2nd paragraph, last line, roll-off --> roll-off is</li>
+				<li>page 62, 5th paragraph, line 10, increase --> increases</li>
+				<li>page 75, line 14, make --> makes</li>
+				<li>page 77, Table 4-4, line 4, DS:[0] --> DS:[2]</li>
+				<li>page 81, line 9 and line 12, personnel --> personal</li>
+				<li>page 82, 3rd paragraph, 3rd line from bottom, personnel --> personal</li>
+				<li>page 83, 2nd paragraph, line 7, forth --> fourth</li>
+				<li>page 85, 10th line from bottom, change to read: sin(-x) = -sin(x)</li>
+				<li>page 90, caption, last line, y2 --> y1</li>
+				<li>page 96, 2nd paragraph, line 1, Figure 5-11 --> Figure 5-8&nbsp;</li>
+				<li>page 99, line 3, x1[n], x2[n], x3[n] --> x0[n], x1[n], x2[n]</li>
+				<li>page 99, line 6, y1[n], y2[n], y3[n] --> y0[n], y1[n], y2[n]</li>
+				<li>page 100, 3rd paragraph, line 5,
+				There --> They</li>
+				<li>page 101, Fig. 5-13, the sign of
+				the graph of x27[n] is reversed</li>
+				<li>page 102, line 9, form --> from</li>
+				<li>page 103, 2nd paragraph, line 4,
+				know --> known</li>
+				
+				<li>page 103, 2nd paragraph, line 10,
+				synthesized --> synthesize</li>
+				<li>page 116, 2nd paragraph, line 1,&nbsp;
+				look an&nbsp; --> look at an</li>
+				<li>page 120, last line, Eq. 6-2 -->
+				Eq. 6-1</li>
+				<li>page 123, line 10, Forth --> Fourth</li>
+				<li>page 128, Table 7-1, "first difference"
+				program, duplicated line number 110</li>
+				<li>page 128, Table 7-1, "first difference"
+				program, line 120, Y[I%-1] --> X[I%-1]</li>
+				<li>page 128, Table 7-1, "running sum
+				program", duplicated line number 120</li>
+				
+				<li>page 142, paragraph 3, line 9, sinusoid
+				--> sinusoidal&nbsp;</li>
+				<li>page 144, paragraph 7, line 10 &amp;
+				12, imaginary --> imagined</li>
+				<li>page 147, Fig. 8-3, Frequency Domain,
+				sine waves --> cosine waves</li>
+				<li>page 147, Fig. 8-3, Frequency Domain,
+				cosine waves --> sine waves</li>
+				<li>page 151, Fig. 8-5 caption line
+				3, continious --> continuous</li>
+				<li>page 152, paragraph 2, line 8, thepattern
+				--> the pattern</li>
+				<li>page 160, Table 8-2, line 340 &amp;
+				350, X[I%] --> XX[I%]</li>
+				
+				<li>page 162, 2nd and 3rd lines after
+				Fig. 8-9, Eq. 8-4 --> Eq. 8-5</li>
+				<li>page 174, caption, 2nd line from
+				bottom, Blackman --> Hamming</li>
+				<li>page 179, Fig 9-7d, delete vertical
+				line through figure label</li>
+				<li>page 182, last line, delete extra
+				space at end of line</li>
+				<li>page 188, line 5, &amp;Phase -->
+				&amp; Phase</li>
+				<li>page 196, line 2, view --> viewed</li>
+				<li>page 202, 3rd full paragraph, line
+				5, continious --> continuous</li>
+				
+				<li>page 202, 3rd full paragraph, line
+				6, drawing --> draw</li>
+				<li>page 202, 3rd full paragraph, line
+				10, minimize --> minimizing</li>
+				<li>page 202, 3rd full paragraph, line
+				11, freqeuncy --> frequency</li>
+				<li>page 206, line 9, on top of each
+				other --> end-to-end</li>
+				<li>page 208, Equation caption, Equation
+				10-2 --> Equation 10-3</li>
+				<li>page 208, 2nd paragraph, line 8,
+				10-1 --> 10-3</li>
+				<li>page 208, 3rd line from bottom,
+				Eq. 10-1 --> Eq. 10-3</li>
+				<li>page 212, 1st full paragraph, line
+				1, Figure 11-4 --> Figure 11-3</li>
+				<li>page 214, line 13, sin(pi kM/N)
+				--> sin(pi k/N)</li>
+				
+				<li>page 214, line 13, pi kM/N --> pi
+				k/Npage 214, 3rd full paragraph, line 5, sin(x)/x --> sin(pi x)/(pi x)</li>
+				<li>page 216, 4th paragraph: There are at least two other waveforms that are their own Fourier transform:
+				the null function, and the impulse train (see page 44)</li>
+				<li>page 220, caption, last line, even
+				--> odd</li>
+				<li>page 229, Table 12-3, sample 6:
+				0100 --> 0110</li>
+				<li>page 234, first line, delete "of
+				these"</li>
+				<li>page 239, first line, signals -->
+				signal</li>
+				<li>page 240, line 10, Chapter 6 -->
+				Chapter 5</li>
+				
+				<li>page 245-259, header of odd pages,
+				Continious --> Continuous</li>
+				<li>page 274, Fig 14-8, caption line
+				1, Deigning --> Designing</li>
+				<li>page 274, 2nd full paragraph, line
+				7/8, band-pass --> band-stop</li>
+				<li>page 275, Fig 14-9, caption line
+				1, Deigning --> Designing</li>
+				<li>page 278, line 5, 11 --> 10</li>
+				<li>page 284, table 15-2, line 250,
+				Y[[0] --> Y[0]</li>
+				<li>page 284, table 15-2, line 300,
+				ACC --> ACC/101</li>
+				<li>page 288, Fig. 16-3b, the labels
+				for "Hamming" and "Blackman" are reversed</li>
+				<li>page 304, 2nd full paragraph, last
+				line, allow --> allowed</li>
+				
+				<li>page 305, Table 17-5, caption, line
+				4, (b) divided by (d) --> (d) divided by (b)</li>
+				<li>page 309, Fig. 17-9c, Weiner -->
+				Wiener</li>
+				<li>page 315, caption, line 2, (d) &amp;
+				(e) --> (e) &amp; (f)</li>
+				<li>page 329, Fig. 19-7a, missing right
+				digit on y-axis labels</li>
+				<li>page 341, Table 20-5, line 1390,
+				-K^2 --> -(K^2)</li>
+				<li>page 360, line 5, outside to inside
+				--> inside to outside</li>
+				<li>page 362, line 2, 14 bits --> 15
+				bits</li>
+				
+				<li>page 365, line 4 and line 5 from
+				bottom, format --> formant</li>
+				<li>pate 366 line 13, format --> formant</li>
+				<li>page 369, Fig. 22-10 caption line
+				3, showing --> show that</li>
+				<li>page 370, 4th full paragraph, line
+				2, log(x+y) --> log(xy)</li>
+				<li>page 371, line 3, a[ ] --> a[ ].</li>
+				<li>page 372, last line, process --
+				processed</li>
+				<li>page 374, line 8, personnel -->
+				personal</li>
+				<li>page 390, 2nd paragraph, line 4,
+				175 --> 150</li>
+				<li>page 405, Fig. 24-6, label in figure,
+				vert[c] --> vert[r]</li>
+				
+				<li>page 405, Fig. 24-6, label in figure,
+				horz[r] --> horz[c]</li>
+				<li>page 407, 3rd paragraph, line 1,
+				every day --> everyday</li>
+				<li>page 440, line 9, exactly one -
+				-> zero or one</li>
+				<li>page 449, Figure caption, Figure
+				25-20 --> Figure 25-19</li>
+				<li>page 449, Eq. 25-2, 4/pi^2 --> -4/pi^2</li>
+				<li>page 469, line 1050, the number
+				"1060" at the end should be the next line number</li>
+				<li>page 469, Table 26-3, line 3040,
+				FOR INPUT NODES --> FOR HIDDEN LAYER</li>
+				<li>page 469, Table 26-3, line 3140,
+				FOR HIDDEN NODES --> FOR OUTPUT LAYER</li>
+				<li>page 475, Fig. 26-12 caption line 9, is a the point --> is a point page 493, Fig. 27-8 caption line 2, STRING
+				should be in italics</li>
+				<li>page 507, Fig. 28-2, M = sqr(85) --> M = sqr(40)</li>
+				<li>page 509, 4th paragraph, line 5,
+				using --> Using</li>
+				<li>page 511, Fig. 28-3 caption line
+				7, allow --> allows</li>
+				<li>page 512, line 7, M &amp; "theta"
+				--> M &amp; "Phi"</li>
+				<li>page 513, 5th full paragraph, line
+				7, + 2.1213 --> - 2.1213</li>
+				<li>page 513, 5th full paragraph, line
+				8,&nbsp; - j 2.1213 --> + j 2.1213</li>
+				
+				<li>page 513, 5th full paragraph, line
+				10, - 0.5740 --> + 0.5740&nbsp;&nbsp;&nbsp;&nbsp;</li>
+				<li>page 513, 5th full paragraph, line
+				11,&nbsp; + j 0.5740 --> - j 0.5740</li>
+				<li>page 514, Fig. 28-4,&nbsp; + 2.1213
+				--> - 2.1213&nbsp;</li>
+				<li>page 514, Fig. 28-4,&nbsp; - j 2.1213
+				--> + j&nbsp; 2.1213</li>
+				<li>page 514, Fig. 28-4, + j 0.4619
+				--> - j 0.4619</li>
+				
+				<li>page 514, Fig. 28-4,&nbsp; - 0.5740
+				--> + 0.5740&nbsp;</li>
+				<li>page 514, Fig. 28-4, +j 0.5740 -->
+				- j 0.5740&nbsp;&nbsp;&nbsp;&nbsp;</li>
+				<li>page 514, 1st full paragraph, line
+				2, + j 0.4619 --> - j 0.4619</li>
+				<li>page 514, 1st full paragraph, line
+				5, 0.4619 --> -0.4619</li>
+				<li>page 521, Eq. 29-3 in cos equation,&nbsp;
+				- e^(-jx) --> + e^(-jx)</li>
+				<li>page 522, line 3, required --> requires</li>
+				<li>page 525, Eq. 29-8 caption line
+				2, Eq. 21-7 --> Eq. 29-7</li>
+				
+				<li>page 525, Eq. 29-8,&nbsp; kn/N]
+				+ j sin --> kn/N + j sin&nbsp;&nbsp;&nbsp;</li>
+				<li>page 525, Eq. 29-8,&nbsp; kn/N]
+				+ j cos --> kn/N - j cos&nbsp;</li>
+				<li>page 529, 9. Scaling --> 8. Scaling</li>
+				<li>page 529, 10. Variations --> 9.
+				Variations&nbsp;</li>
+				<li>page 545, 2nd full parag., line
+				1, the last chapter --> chapter 28</li>
+				<li>page 549, Figure caption, Figure
+				30-6 --> Figure 30-7</li>
+				<li>page 551, Fig. 30-8 caption, the
+				last chapter --> chapter 28&nbsp;&nbsp;&nbsp;&nbsp;</li>
+				
+				<li>page 552, 3rd paragraph, line 1,
+				Figure 30-7 --> Figure 30-9</li>
+				<li>page 554, 2nd full paragraph, line
+				4, real --> imaginary</li>
+				<li>page 555, line 4, imaginary axis
+				--> real axis</li>
+				<li>page 558, the equation 6 lines from
+				the bottom, y[n] = r^n --> y[n] = r^(-n)</li>
+				<li>page 559, Fig. 31-1a,b,c (change
+				in 3 places),&nbsp;&nbsp; y[n] = r^n - -> y[n] = r^(-n)</li>
+				<li>page 559, Fig. 31-1a, r = 0.9 -->
+				r = 1.1</li>
+				<li>page 559, Fig. 31-1c, r = 1.1 -->
+				r = 0.9</li>
+				<li>page 559, line 2, change to read:
+				"will decrease if r>1, and increase if r&lt;1."</li>
+				
+				<li>page 559, Equation after line 5 should read: r^(-n) = [e^(ln(r)]^(-n) = e^(-n ln(r)) = e^(-sigma n) where: sigma = ln(r)</li>
+				<li>page 559, bottom equation should read: X(r,omega) = {sum from n=-infinity to infinity} x[n] r^(-n) e^(-j omega n)</li>
+				<li>page 560, top equation, should read: z = r e^(j omega)</li>
+				<li>page 561, paragraph 2, line 6, must between --> must be between</li>
+				
+				<li>page 560, 2nd full paragraph, line 6, is this --> in this</li>
+				<li>page 564, line 3, dividing --> multiplying</li>
+				<li>page 564, 4th paragraph, line 8, methods cannot --> methods generally cannot</li>
+				<li>page 564, line 14, s-domain --> z-domain</li>
+				<li>page 571, numerator of right half of equation, wz + yz --> wz + xy</li>
+				<li>page 577, Fig. 31-7, line 340, Fig. 23-8 --> Fig. 31-8</li>
+				<li>page 578, 3rd paragraph, last line, H(s) --> H[z]</li>
+				<li>page 578, 3rd line from bottom, 0 to pi radians/second --> 0 to infinity radians/second</li>
+				<li>page 622, Under Fourier Transform, change "discrete time Fourier series" to "discrete time Fourier transform"</li>			
+			</ul>															
+			
+			
+			<br /><br />			
+			<h2>Second Edition (softcover and electronic pdf files)</h2> 
+			
+			<ul class="nomarker">
+				<li>page 2, line 6, vender --> vendor</li>
+				<li>page 5, line 12, particularity -->
+				particularly</li>
+				<li>page 6, line 18, resonate --> resonant</li>
+				<li>page 7, 3rd line from bottom, at
+				--> as</li>
+				<li>page 9, line 7, criteria --> criterion</li>
+				<li>page 17, Table 2-2, program bug:
+				divide by zero error generated on first loop</li>
+				
+				<li>page 20, Fig. 2-4 caption, line
+				4, shows --> show</li>
+				<li>page 20, line 1, 8 samples --> 7
+				samples</li>
+				<li>page 21, Table 2-3, line 340, H[I%]
+				--> H%[I%]</li>
+				<li>page 22, 4th paragraph, 2nd to last
+				line, histogram --> pmf</li>
+				<li>page 23, 3rd paragraph, 3th line,
+				121 - 120 --> (121 - 120)</li>
+				<li>page 23, 3rd paragraph, 5th line,
+				120.5 - 120.4 --> (120.5 - 120.4)</li>
+				<li>page 25, Table 2-4, program bug:
+				program will not handle a value 10.0</li>
+				<li>page 25, Table 2-4, line 230, .01
+				--> 100</li>
+				<li>page 26, line 7, delete "in"</li>
+				
+				<li>page 32, 3rd line from bottom, used
+				--> use</li>
+				<li>page 39, 3rd paragraph, line 2,
+				continious --> continuous</li>
+				<li>page 41, caption, line 2, recreated
+				--> recreate</li>
+				<li>page 41, line 7, their --> there</li>
+				<li>page 54, 2nd paragraph, last line,
+				roll-off --> roll-off is</li>
+				<li>page 62, 5th paragraph, line 9,
+				increase --> increases</li>
+				<li>page 77, Table 4-4, line 4, DS:[0]
+				--> DS:[2]</li>
+				<li>page 81, line 9 and line 12, personnel
+				--> personal</li>
+				<li>page 82, 3rd paragraph, 3rd line
+				from bottom, personnel --> personal</li>
+				
+				<li>page 85, 4th line from bottom, change
+				to read: sin(-x) = -sin(x)</li>
+				<li>page 90, caption, last line, y2
+				--> y1</li>
+				<li>page 93, Fig. 5-6b, x-axis, B -->
+				H</li>
+				<li>page 128, Table 7-1, "first difference"
+				program, duplicated line number 110</li>
+				<li>page 128, Table 7-1, "first difference"
+				program, line 120, Y[I%-1] --> X[I%-1]</li>
+				<li>page 128, Table 7-1, "running sum
+				program", duplicated line number 120</li>
+				<li>page 162, 2nd and 3rd lines after
+				Fig. 8-9, Eq. 8-4 --> Eq. 8-5</li>
+				<li>page 174, caption, 2nd line from
+				bottom, Blackman --> Hamming</li>
+				<li>page 206, caption for Eq. 10-1,
+				add last line "between 0 and pi."</li>
+				
+				<li>page 214, line 13, sin(pi kM/N)
+				--> sin(pi k/N)</li>
+				<li>page 214, line 13, pi kM/N --> pi
+				k/N</li>
+				<li>page 220, caption, last line, even
+				--> odd</li>
+				<li>page 234, first line, delete "of
+				these"</li>
+				<li>page 239, first line, signals -->
+				signal</li>
+				<li>page 240, line 10, Chapter 6 -->
+				Chapter 5</li>
+				<li>page 278, line 5, 11 --> 10</li>
+				<li>page 284, table 15-2, line 250,
+				Y[[0] --> Y[0]</li>
+				<li>page 284, table 15-2, line 300,
+				ACC --> ACC/101</li>
+				
+				<li>page 288, Fig. 16-3b, the labels
+				for "Hamming" and "Blackman" are reversed</li>
+				<li>page 305, Table 17-5, caption, line
+				4, (b) divided by (d) --> (d) divided by (b)</li>
+				<li>page 309, Fig. 17-9c, Weiner -->
+				Wiener</li>
+				<li>page 315, caption, line 2, (d) &amp;
+				(e) --> (e) &amp; (f)&nbsp;&nbsp;</li>
+				<li>page 360, line 5, outside to inside
+				--> inside to outside</li>
+				<li>page 362, line 2, 14 bits --> 15
+				bits</li>
+				<li>page 365, line 4 and line 5 from
+				bottom, format --> formant</li>
+				
+				<li>pate 366 line 12, format --> formant</li>
+				<li>page 370, 4th full paragraph, line
+				2, log(x+y) --> log(xy)</li>
+				<li>page 371, line 3, add "." at end
+				of sentence</li>
+				<li>page 371, line 9, multi-plication
+				--> multiplication</li>
+				<li>page 374, line 8, personnel -->
+				personal</li>
+				<li>page 390, 2nd paragraph, line 4,
+				175 --> 150</li>
+				<li>page 407, 3rd paragraph, line 1,
+				every day --> everyday</li>
+				<li>page 440, line 9, exactly one -
+				-> zero or one</li>
+				<li>page 449, Eq. 25-2, 4/pi^2 --> -4/pi^2</li>
+				
+				<li>page 469, Table 26-3, line 3040,
+				FOR INPUT NODES --> FOR HIDDEN LAYER</li>
+				<li>page 469, Table 26-3, line 3140,
+				FOR HIDDEN NODES --> FOR OUTPUT LAYER</li>
+				<li>page 516, line 8, 30,000 --> 3000</li>
+				<li>page 523, Table 28-4, line 008,
+				pm(k12,m14) --> pm(i12,m14)</li>
+				<li>page 543, 4 th full paragraph, line
+				5, 29-3 --> 29-2</li>
+				<li>page 543, Fig. 29-4 caption, line
+				5, 29-3a --> 29-2a</li>
+				<li>page 548, 15 th line from bottom,
+				(echo, 1 newest, dm); - -> (echo, 1, newest, dm);</li>
+				<li>page 555, Fig. 30-2, M = sqr(85)
+				--> M = sqr(40)</li>
+				<li>page 577, 9. Scaling --> 8. Scaling</li>
+				
+				<li>page 577, 10. Variations --> 9.
+				Variations</li>
+				<li>page 590, caption, line 7, 30-5
+				--> 32-5</li>
+				<li>page 602, 3rd paragraph, line 4,
+				real --> imaginary</li>
+				<li>page 603, line 4, imaginary axis
+				--> real axis</li>
+				<li>page 606, the equation 6 lines from
+				the bottom, y[n] = r^n --> y[n] = r^(-n)</li>
+				<li>page 607, Fig. 33-1a,b,c (change in 3 places),&nbsp;&nbsp; y[n] = r^n - -> y[n] = r^(-n)</li>
+				<li>page 607, Fig. 33-1a, r = 0.9 -->
+				r = 1.1</li>
+				<li>page 607, Fig. 33-1c, r = 1.1 -->
+				r = 0.9</li>
+				
+				<li>page 607, line 2, change to read:
+				"will decrease if r>1, and increase if r&lt;1."</li>
+				<li>page 607, Equation after line 5	should read: r^(-n) = [e^(ln(r)]^(-n) = e^(-n ln(r)) = e^(-sigma n) where: sigma = ln(r)</li>
+				<li>page 607, bottom equation should read: X(r,omega) = {sum from n=-infinity to infinity} x[n] r^(-n) e^(-j omega n)</li>
+				<li>page 608, top equation, should read: z = r e^(j omega)</li>
+				
+				<li>page 608, paragraph 2, line 6, must
+				between --> must be between</li>
+				<li>page 612, line 3, dividing --> multiplying</li>
+				<li>page 612, line 13, s-domain -->
+				z-domain</li>
+				<li>page 612, 4th paragraph, line 8,
+				methods cannot --> methods generally cannot</li>
+				<li>page 619, numerator of right half
+				of equation, wz + yz --> wz + xy</li>
+				<li>page 626, 3rd line from bottom,
+				0 to pi radians/second --> 0 to infinity radians/second</li>
+				<li>page 631, header, Study Guide -->
+				Glossary</li>
+				<li>page 645-650, header, Glossary -->
+				Index</li>
+				<li>page 646, Under Fourier Transform,
+				change "discrete time Fourier series" to "discrete time	Fourier transform"</li>			
+			
+			</ul>
+
+		
+		</div>
+		<div class="clear"><!-- --></div>
+		
+
+	</div>
+</div>
+
+<!-- Footer -->
+
+<div id="footer">
+	<a href="index.html">Home</a> | <a href="pdfbook.htm">The Book by Chapters</a> | <a href="about.htm">About the Book</a> | <a href="swsmith.htm">Steven W. Smith</a> | <a href="http://www.dsprelated.com/blogs-1/nf/Steve_Smith.php">Blog</a> | <a href="contact.htm">Contact</a>
+	<br />
+	Copyright © 1997-2011 by California Technical Publishing
+</div>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-1774944-11");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+</body>
+</html>
